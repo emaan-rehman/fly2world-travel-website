@@ -1084,3 +1084,172 @@ background: url('../images/hero-bg.jpg') center/cover no-repeat;
   padding: 14px 28px;
   font-size: 1rem;
 }
+/* ==========================================
+   DESTINATION QUICK-VIEW MODAL STYLES
+   ========================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 23, 42, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  padding: 20px;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-card {
+  background-color: var(--white);
+  border-radius: var(--radius-card, 16px);
+  width: 100%;
+  max-width: 580px;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.modal-overlay.active .modal-card {
+  transform: scale(1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-header-banner {
+  position: relative;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.modal-header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, transparent 20%, rgba(15, 23, 42, 0.85) 100%);
+}
+
+.modal-title-wrap {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+}
+
+.modal-region-badge {
+  display: inline-block;
+  background-color: var(--blue, #0284c7);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.modal-title-wrap h2 {
+  font-size: 1.75rem;
+  margin: 0;
+  color: #ffffff;
+}
+
+.modal-body {
+  padding: 24px;
+}
+
+.modal-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+  background-color: #f8fafc;
+  padding: 14px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.stat-item span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted, #64748b);
+  margin-bottom: 4px;
+}
+
+.stat-item strong {
+  font-size: 0.95rem;
+  color: var(--navy, #0f172a);
+}
+
+.modal-requirements-title {
+  font-size: 1rem;
+  color: var(--navy, #0f172a);
+  margin-bottom: 10px;
+}
+
+.modal-requirements-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.modal-requirements-list li {
+  font-size: 0.88rem;
+  color: #334155;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.modal-requirements-list li i {
+  color: var(--blue, #0284c7);
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.modal-actions .btn {
+  flex: 1;
+  justify-content: center;
+  padding: 12px;
+}
