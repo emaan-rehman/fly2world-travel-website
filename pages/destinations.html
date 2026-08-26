@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Destinations | Fly2World Travel & Visa Consultancy</title>
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Shared Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/variables.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="brand-logo">
+        <img src="../assets/images/logo.png" alt="Fly2World Logo" class="logo-img">
+        <span class="brand-text">Fly<span class="brand-accent">2</span>World</span>
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="destinations.html" class="nav-link active">Destinations</a></li>
+          <li><a href="travel-services.html" class="nav-link">Travel Services</a></li>
+          <li><a href="visa-services.html" class="nav-link">Visa Services</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="javascript:void(0)" onclick="openWhatsApp('Destinations General')" class="btn btn-whatsapp nav-btn">
+          <i class="fa-brands fa-whatsapp"></i> <span>WhatsApp Us</span>
+        </a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Destinations Inner Hero -->
+  <section class="inner-hero">
+    <div class="inner-hero-overlay"></div>
+    <div class="container inner-hero-container text-center">
+      <span class="hero-badge"><i class="fa-solid fa-earth-americas"></i> Worldwide Travel & Visa Assistance</span>
+      <h1>Explore Any Destination With Fly2World</h1>
+      <p>Whether you select from our top featured countries or require visa consultation for any other nation worldwide, we guide your travel journey end-to-end.</p>
+    </div>
+  </section>
+
+  <!-- Filterable Destinations Section -->
+  <section class="section-padding">
+    <div class="container">
+      
+      <!-- Region Filter Tabs -->
+      <div class="filter-wrapper">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="europe">Europe (8)</button>
+        <button class="filter-btn" data-filter="asia">Asia (5)</button>
+        <button class="filter-btn" data-filter="middle-east">Middle East (2)</button>
+        <button class="filter-btn" data-filter="africa">Africa (3)</button>
+        <button class="filter-btn" data-filter="americas">Americas (4)</button>
+        <button class="filter-btn" data-filter="oceania">Oceania (2)</button>
+      </div>
+
+      <!-- Destinations Grid -->
+      <div class="destinations-grid" id="destinationsGrid">
+        
+        <!-- ================= EUROPE (8) ================= -->
+        <div class="destination-card" data-region="europe">
+          <img src="../assets/images/destinations/spain.jpg" alt="Spain">
+          <div class="dest-overlay">
+            <span class="region-tag">Europe</span>
+            <h3>Spain</h3>
+            <a href="javascript:void(0)" onclick="openWhatsApp('Spain Travel')" class="btn btn-primary btn-sm">Plan Trip <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="destination-card" data-region="europe">
+          <img src="../assets/images/destinations/italy.jpg" alt="Italy">
+          <div class="dest-overlay">
+            <span class="region-tag">Europe</span>
+            <h3>Italy</h3>
+            <a href="javascript:void(0)" onclick="openWhatsApp('Italy Travel')" class="btn btn-primary btn-sm">Plan Trip <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="destination-card" data-region="europe">
+          <img src="../assets/images/destinations/france.jpg" alt="France">
+          <div class="dest-overlay">
+            <span class="region-tag">Europe</span>
+            <h3>France</h3>
+            <a href="javascript:void(0)" onclick="openWhatsApp('France Travel')" class="btn btn-primary btn-sm">Plan Trip <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="destination-card" data-region="europe">
+          <img src="../assets/images/destinations/netherlands.jpg" alt="Netherlands">
+          <div class="dest-overlay">
+            <span class="region-tag">Europe</span>
+            <h3>Netherlands</h3>
+            <a href="javascript:void(0)" onclick="openWhatsApp('Netherlands Travel')" class="btn btn-primary btn-sm">Plan Trip <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="destination-card" data-region="europe">
+          <img src="../assets/images/destinations/romania.jpg" alt="Romania">
+          <div class="dest-overlay">
+            <span class="region-tag">Europe</span>
+            <h3>Romania</h3>
+            <a href="javascript:void(0)" onclick="openWhatsApp('Romania Travel')" class="btn btn-primary btn-sm">Plan Trip <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="destination-card" data-region="europe">
+          <img src="../assets/images/destinations/portugal.jpg" alt="Portugal">
+          <div class="dest-overlay">
+            <span class="region-tag">Europe</span>
+            <h3>Portugal</h3>
+            <a href="javascript:void(0)" onclick="openWhatsApp('Portugal Travel')" class="btn btn-primary btn-sm">Plan Trip <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="destination-card" data-region="europe">
+          <img src="../assets/images/destinations/germany.jpg" alt="Germany">
+          <div class="dest-overlay">
+            <span class="region-tag">Europe</span>
+            <h3>Germany</h3>
+            <a href="javascript:void(0)" onclick="openWhatsApp('Germany Travel')" class="btn btn-primary btn-sm">Plan Trip <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="destination-card" data-region="europe">
+          <img src="../assets/images/destinations/uk.jpg" alt="United Kingdom">
+          <div class="dest-overlay">
+            <span class="region-tag">Europe</span>
+            <h3>United Kingdom</h3>
+            <a href="javascript:void(0)" onclick="openWhatsApp('UK Travel')" class="btn btn-primary btn-sm">Plan Trip <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- ================= AMERICAS (4) ================= -->
+        <div class="destination-card" data-region="americas">
+          <img src="../assets/images/destinations/usa.jpg" alt="USA">
+          <div class="dest-overlay">
+            <span class="region-tag">Americas</span>
+            <h3>United States (USA)</h3>
+            <a href="javascript:void(0)" onclick="openWhatsApp('USA Travel')" class="btn btn-primary btn-sm">Plan Trip <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="destination-card" data-region="americas">
+          <img src="../assets/images/destinations/uruguay.jpg" alt="Uruguay">
+          <div class="dest-overlay">
+            <span class="region-tag">Americas</span>
+            <h3>Uruguay</h3>
+            <a href="javascript:void(0)" onclick="openWhatsApp('Uruguay Travel')" class="btn btn-primary btn-sm">Plan Trip <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="destination-card" data-region="americas">
+          <img src="../assets/images/destinations/canada.jpg" alt="Canada">
+          <div class="dest-overlay">
+            <span class="region-tag">Americas</span>
+            <h3>Canada</h3>
+            <a href="javascript:void(0)" onclick="openWhatsApp('Canada Travel')" class="btn btn-primary btn-sm">Plan Trip <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="destination-card" data-region="americas">
+          <img src="../assets/images/destinations/brazil.jpg" alt="Brazil">
+          <div class="dest-overlay">
+            <span class="region-tag">Americas</span>
+            <h3>Brazil</h3>
+            <a href="javascript:void(0)" onclick="openWhatsApp('Brazil Travel')" class="btn btn-primary btn-sm">Plan Trip <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- ================= OCEANIA (2) ================= -->
+        <div class="destination-card" data-region="oceania">
+          <img src="../assets/images/destinations/newzealand.jpg" alt="New Zealand">
+          <div class="dest-overlay">
+            <span class="region-tag">Oceania</span>
+            <h3>New Zealand</h3>
+            <a href="javascript:void(0)" onclick="openWhatsApp('New Zealand Travel')" class="btn btn-primary btn-sm">Plan Trip <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="destination-card" data-region="oceania">
+          <img src="../assets/images/destinations/australia.jpg" alt="Australia">
+          <div class="dest-overlay">
+            <span class="region-tag">Oceania</span>
+            <h3>Australia</h3>
+            <a href="javascript:void(0)" onclick="openWhatsApp('Australia Travel')" class="btn btn-primary btn-sm">Plan Trip <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- ================= ASIA (5) ================= -->
+        <div class="destination-card" data-region="asia">
+          <img src="../assets/images/destinations/turkey.jpg" alt="Turkey">
+          <div class="dest-overlay">
+            <span class="region-tag">Asia</span>
+            <h3>Turkey</h3>
+            <a href="javascript:void(0)" onclick="openWhatsApp('Turkey Travel')" class="btn btn-primary btn-sm">Plan Trip <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="destination-card" data-region="asia">
+          <img src="../assets/images/destinations/thailand.jpg" alt="Thailand">
+          <div class="dest-overlay">
+            <span class="region-tag">Asia</span>
+            <h3>Thailand</h3>
+            <a href="javascript:void(0)" onclick="openWhatsApp('Thailand Travel')" class="btn btn-primary btn-sm">Plan Trip <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="destination-card" data-region="asia">
+          <img src="../assets/images/destinations/malaysia.jpg" alt="Malaysia">
+          <div class="dest-overlay">
+            <span class="region-tag">Asia</span>
+            <h3>Malaysia</h3>
+            <a href="javascript:void(0)" onclick="openWhatsApp('Malaysia Travel')" class="btn btn-primary btn-sm">Plan Trip <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="destination-card" data-region="asia">
+          <img src="../assets/images/destinations/china.jpg" alt="China">
+          <div class="dest-overlay">
+            <span class="region-tag">Asia</span>
+            <h3>China</h3>
+            <a href="javascript:void(0)" onclick="openWhatsApp('China Travel')" class="btn btn-primary btn-sm">Plan Trip <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="destination-card" data-region="asia">
+          <img src="../assets/images/destinations/japan.jpg" alt="Japan">
+          <div class="dest-overlay">
+            <span class="region-tag">Asia</span>
+            <h3>Japan</h3>
+            <a href="javascript:void(0)" onclick="openWhatsApp('Japan Travel')" class="btn btn-primary btn-sm">Plan Trip <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- ================= MIDDLE EAST (2) ================= -->
+        <div class="destination-card" data-region="middle-east">
+          <img src="../assets/images/destinations/uae.jpg" alt="UAE">
+          <div class="dest-overlay">
+            <span class="region-tag">Middle East</span>
+            <h3>United Arab Emirates</h3>
+            <a href="javascript:void(0)" onclick="openWhatsApp('UAE Travel')" class="btn btn-primary btn-sm">Plan Trip <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="destination-card" data-region="middle-east">
+          <img src="../assets/images/destinations/saudiArabia.jpg" alt="Saudi Arabia">
+          <div class="dest-overlay">
+            <span class="region-tag">Middle East</span>
+            <h3>Saudi Arabia</h3>
+            <a href="javascript:void(0)" onclick="openWhatsApp('Saudi Arabia Travel')" class="btn btn-primary btn-sm">Plan Trip <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- ================= AFRICA (3) ================= -->
+        <div class="destination-card" data-region="africa">
+          <img src="../assets/images/destinations/zimbabwe.jpg" alt="Zimbabwe">
+          <div class="dest-overlay">
+            <span class="region-tag">Africa</span>
+            <h3>Zimbabwe</h3>
+            <a href="javascript:void(0)" onclick="openWhatsApp('Zimbabwe Travel')" class="btn btn-primary btn-sm">Plan Trip <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="destination-card" data-region="africa">
+          <img src="../assets/images/destinations/eswatini.jpg" alt="Eswatini">
+          <div class="dest-overlay">
+            <span class="region-tag">Africa</span>
+            <h3>Eswatini</h3>
+            <a href="javascript:void(0)" onclick="openWhatsApp('Eswatini Travel')" class="btn btn-primary btn-sm">Plan Trip <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="destination-card" data-region="africa">
+          <img src="../assets/images/destinations/lesotho.jpg" alt="Lesotho">
+          <div class="dest-overlay">
+            <span class="region-tag">Africa</span>
+            <h3>Lesotho</h3>
+            <a href="javascript:void(0)" onclick="openWhatsApp('Lesotho Travel')" class="btn btn-primary btn-sm">Plan Trip <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+       <!-- Special Card for Unlisted Destinations -->
+<div class="destination-card global-custom-card always-visible" data-region="all">
+  <div class="custom-card-inner">
+    <i class="fa-solid fa-globe custom-card-icon"></i>
+    <h3>Any Other Country</h3>
+    <p>We handle visa applications and travel arrangements for all international destinations.</p>
+    <a href="contact.html" class="btn btn-primary btn-sm">Custom Inquiry <i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </section>
+<!-- Global Visa Consultation Banner -->
+  <section class="section-padding global-banner-section">
+    <div class="container text-center global-banner-container">
+      <div class="global-banner-icon">
+        <i class="fa-solid fa-passport"></i>
+      </div>
+      <h2>Don't See Your Destination Listed?</h2>
+      <p>
+        Fly2World isn't limited to 24 countries! We provide <strong>worldwide visa consultations, file preparation, and flight arrangements</strong> for any country across the globe.
+      </p>
+      
+      <!-- Updated CTA Button -->
+      <a href="contact.html" class="btn btn-primary global-banner-btn">
+        Contact Us <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Premium Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Column 1: Brand Info -->
+        <div class="footer-col brand-col">
+          <a href="#" class="footer-logo">
+            <img src="../assets/images/logo.png" alt="Fly2World Logo" class="logo-img">
+            <span class="logo-text">Fly2World</span>
+          </a>
+          <p class="footer-desc">
+            Your trusted international travel agency and visa consultancy. We deliver personalized travel solutions, visa guidance, and custom tour planning for global travelers.
+          </p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/_fly2world?igsi=MXN6NjRyMHVrOTJrZA%3D%3D&utm_source=qr" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="javascript:void(0)" onclick="openWhatsApp('Footer Social')" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="travel-services.html">Travel Services</a></li>
+            <li><a href="visa-services.html">Visa Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Travel & Visa Services -->
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <ul class="footer-links">
+            <li><a href="travel-services.html">Flight Arrangements</a></li>
+            <li><a href="travel-services.html#hotel-booking">Hotel Booking</a></li>
+            <li><a href="travel-services.html#custom-tours">Customized Tours</a></li>
+            <li><a href="visa-services.html">Visa Consultation</a></li>
+            <li><a href="visa-services.html#file-prep">File Preparation</a></li>
+            <li><a href="travel-services.html#umrah">Umrah Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Direct Contact Info -->
+        <div class="footer-col contact-col">
+          <h4>Contact Us</h4>
+          <ul class="contact-list">
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:fly2world1976@gmail.com">fly2world1976@gmail.com</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+27797911043">+27 (0) 79 791 1043</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-earth-americas"></i>
+              <span>Global Travel Assistance</span>
+            </li>
+          </ul>
+          <a href="javascript:void(0)" onclick="openWhatsApp('Footer Direct')" class="btn btn-whatsapp footer-btn">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Legal Disclaimer & Copyright -->
+      <div class="footer-bottom">
+        <p>© 2026 Fly2World. All Rights Reserved.</p>
+        <p class="disclaimer">
+          <strong>Disclaimer:</strong> Visa decisions are made exclusively by the relevant embassy/governmental authorities. Fly2World provides consultation, application assistance, and file preparation services.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/whatsapp.js"></script>
+  <script>
+  // Region Filter Mechanics
+const filterBtns = document.querySelectorAll('.filter-btn');
+const destCards = document.querySelectorAll('.destination-card');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filter = btn.dataset.filter;
+
+    destCards.forEach(card => {
+      // Keep card visible if it matches the region, if 'all' is selected, OR if it has the 'always-visible' class
+      if (filter === 'all' || card.dataset.region === filter || card.classList.contains('always-visible')) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+  </script>
+</body>
+</html>

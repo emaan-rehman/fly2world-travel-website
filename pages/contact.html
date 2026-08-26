@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Fly2World International Travel Consultancy</title>
+<link rel="icon" type="image/png" href="../assets/images/logo.png">
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Shared Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/variables.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="brand-logo">
+        <img src="../assets/images/logo.png" alt="Fly2World Logo" class="logo-img">
+        <span class="brand-text">Fly<span class="brand-accent">2</span>World</span>
+      </a>
+     <nav class="nav-menu" id="navMenu">
+  <ul>
+    <li><a href="../index.html" class="nav-link">Home</a></li>
+    <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+    <li><a href="travel-services.html" class="nav-link">Travel Services</a></li>
+    <li><a href="visa-services.html" class="nav-link">Visa Services</a></li>
+    <li><a href="about.html" class="nav-link">About Us</a></li>
+    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+  </ul>
+</nav>
+      <div class="nav-actions">
+        <a href="javascript:void(0)" onclick="openWhatsApp('Contact Direct')" class="btn btn-whatsapp nav-btn">
+          <i class="fa-brands fa-whatsapp"></i> <span>WhatsApp Us</span>
+        </a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Contact Grid Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <!-- Column 1: Worldwide Contact Information -->
+        <div class="contact-info-card">
+          <span class="subheading">Get In Touch</span>
+          <h2>We're Here to Help</h2>
+          <p style="color: var(--text-muted); margin-bottom: 30px;">
+            Have questions about visa documents, destination entries, or customized itineraries? Contact our team directly via email or WhatsApp.
+          </p>
+
+          <div class="contact-methods">
+            <div class="method-item">
+              <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <h4>Email Support</h4>
+                <a href="mailto:fly2world1976@gmail.com">fly2world1976@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="method-item">
+              <div class="method-icon"><i class="fa-brands fa-whatsapp"></i></div>
+              <div>
+                <h4>Direct WhatsApp Inquiry</h4>
+                <a href="javascript:void(0)" onclick="openWhatsApp('Contact Inquiry Page')">+27 (0) 79 791 1043</a>
+              </div>
+            </div>
+
+            <div class="method-item">
+              <div class="method-icon"><i class="fa-solid fa-earth-americas"></i></div>
+              <div>
+                <h4>Service Scope</h4>
+                <p style="margin: 0; color: var(--navy); font-size: 0.95rem;">Worldwide Travelers & Global Passport Holders</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Dual-Action Inquiry Form -->
+        <div class="contact-form-wrapper">
+          <form id="inquiryForm" onsubmit="handleFormSubmit(event)">
+            <h3>Send a Travel Inquiry</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 24px;">Fill out your travel details and we will route your inquiry directly to our consultation team.</p>
+
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input type="text" id="fullName" required placeholder="Enter your full name">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="whatsappNum">WhatsApp Number *</label>
+                <input type="tel" id="whatsappNum" required placeholder="+1 234 567 8900">
+              </div>
+              <div class="form-group">
+                <label for="emailAddr">Email Address</label>
+                <input type="email" id="emailAddr" placeholder="name@example.com">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="serviceType">Service Required *</label>
+                <select id="serviceType" required>
+                  <option value="" disabled selected>Select a Service</option>
+                  <option value="Tourist Visa">Tourist Visa Assistance</option>
+                  <option value="Visit Visa">Visit / Family Visa</option>
+                  <option value="Schengen Visa">Schengen Visa Consultation</option>
+                  <option value="Flight Booking">Flight Arrangements</option>
+                  <option value="Hotel Booking">Hotel Reservation</option>
+                  <option value="Customized Tour">Customized Tour Planning</option>
+                  <option value="Travel Insurance">Travel Insurance</option>
+                  <option value="Umrah Services">Umrah Travel Assistance</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="destination">Where would you like to go? *</label>
+                <input type="text" id="destination" required placeholder="e.g. Spain, UAE, UK, Japan">
+              </div>
+            </div>
+
+            <!-- Separated Country of Departure & Passport Fields -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="departingCountry">Country of Departure *</label>
+                <input type="text" id="departingCountry" required placeholder="e.g. South Africa, UAE, UK">
+              </div>
+              <div class="form-group">
+                <label for="passportCountry">Passport Held *</label>
+                <input type="text" id="passportCountry" required placeholder="e.g. South African, Pakistani, Indian">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="departDate">Departure Date</label>
+                <input type="date" id="departDate">
+              </div>
+              <div class="form-group">
+                <label for="returnDate">Return Date</label>
+                <input type="date" id="returnDate">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Travel Notes / Details</label>
+              <textarea id="message" rows="4" placeholder="Share any specific requirements, number of travelers, or travel preferences..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Inquiry</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-col brand-col">
+          <a href="#" class="footer-logo">
+            <img src="../assets/images/logo.png" alt="Fly2World Logo" class="logo-img">
+            <span class="logo-text">Fly2World</span>
+          </a>
+          <p class="footer-desc">
+            Your international travel agency and visa consultancy. Delivering personalized travel solutions, flight bookings, and visa guidance for global travelers.
+          </p>
+          <div class="footer-socials">
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="javascript:void(0)" onclick="openWhatsApp('Footer Social')" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="travel-services.html">Travel Services</a></li>
+            <li><a href="visa-services.html">Visa Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <ul class="footer-links">
+            <li><a href="travel-services.html">Flight Arrangements</a></li>
+            <li><a href="travel-services.html#hotel-booking">Hotel Booking</a></li>
+            <li><a href="travel-services.html#custom-tours">Customized Tours</a></li>
+            <li><a href="visa-services.html">Visa Consultation</a></li>
+            <li><a href="visa-services.html#file-prep">File Preparation</a></li>
+            <li><a href="travel-services.html#umrah">Umrah Services</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col contact-col">
+          <h4>Contact Us</h4>
+          <ul class="contact-list">
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:fly2world1976@gmail.com">fly2world1976@gmail.com</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+27797911043">+27 (0) 79 791 1043</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-earth-americas"></i>
+              <span>Global Travel Assistance</span>
+            </li>
+          </ul>
+          <a href="javascript:void(0)" onclick="openWhatsApp('Footer Direct')" class="btn btn-whatsapp footer-btn">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Fly2World. All Rights Reserved.</p>
+        <p class="disclaimer">
+          <strong>Disclaimer:</strong> Visa decisions are made exclusively by the relevant embassy/governmental authorities. Fly2World provides consultation, application assistance, and file preparation services.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- EmailJS SDK Integration -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    (function() {
+      // Initialize EmailJS with your Public Key from emailjs.com
+      emailjs.init("qmPB-syPdXJGVoAip");
+    })();
+  </script>
+
+  <!-- External JavaScript Files -->
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/whatsapp.js"></script>
+  
+  <!-- Dual-Action Handler Script -->
+  <script>
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      
+      const form = document.getElementById('inquiryForm');
+      const submitBtn = form.querySelector('button[type="submit"]');
+
+      // Form Data Object for EmailJS
+      const templateParams = {
+        full_name: document.getElementById('fullName').value,
+        whatsapp_num: document.getElementById('whatsappNum').value,
+        email_addr: document.getElementById('emailAddr').value || 'Not provided',
+        service_type: document.getElementById('serviceType').value,
+        destination: document.getElementById('destination').value,
+        departing_country: document.getElementById('departingCountry').value,
+        passport_country: document.getElementById('passportCountry').value,
+        depart_date: document.getElementById('departDate').value || 'Flexible',
+        return_date: document.getElementById('returnDate').value || 'Flexible',
+        message: document.getElementById('message').value || 'None'
+      };
+
+      // WhatsApp Pre-filled String
+      const waText = `Hello Fly2World! I have a new travel inquiry:\n\n*Name:* ${templateParams.full_name}\n*Phone:* ${templateParams.whatsapp_num}\n*Email:* ${templateParams.email_addr}\n*Service Requested:* ${templateParams.service_type}\n*Destination:* ${templateParams.destination}\n*Departing From:* ${templateParams.departing_country}\n*Passport Held:* ${templateParams.passport_country}\n*Departure Date:* ${templateParams.depart_date}\n*Return Date:* ${templateParams.return_date}\n*Details:* ${templateParams.message}`;
+      const waUrl = `https://wa.me/27797911043?text=${encodeURIComponent(waText)}`;
+
+      // Update UI button status
+      submitBtn.disabled = true;
+      submitBtn.innerText = "Sending Inquiry...";
+
+      // Execute Background Email sending via EmailJS
+      emailjs.send("service_6cwff1a", "template_hcqu0hz", templateParams)
+        .then(function(response) {
+          // Email sent successfully -> open WhatsApp tab
+          window.open(waUrl, '_blank');
+          alert("Success! Your travel inquiry has been emailed to Fly2World and prepared for WhatsApp.");
+          form.reset();
+        })
+        .catch(function(error) {
+          // If Email service encounters an issue, still open WhatsApp so the lead is retained
+          console.error("EmailJS dispatch failed:", error);
+          window.open(waUrl, '_blank');
+          alert("Your inquiry has been prepared for WhatsApp!");
+        })
+        .finally(function() {
+          submitBtn.disabled = false;
+          submitBtn.innerText = "Send Inquiry";
+        });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Services | Fly2World Travel & Visa Consultancy</title>
+  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Shared Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/variables.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="brand-logo">
+        <img src="../assets/images/logo.png" alt="Fly2World Logo" class="logo-img">
+        <span class="brand-text">Fly<span class="brand-accent">2</span>World</span>
+      </a>
+   <nav class="nav-menu" id="navMenu">
+  <ul>
+    <li><a href="../index.html" class="nav-link">Home</a></li>
+    <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+    <li><a href="travel-services.html" class="nav-link active">Travel Services</a></li>
+    <li><a href="visa-services.html" class="nav-link">Visa Services</a></li>
+    <li><a href="about.html" class="nav-link">About Us</a></li>
+    <li><a href="contact.html" class="nav-link">Contact</a></li>
+  </ul>
+</nav>
+      <div class="nav-actions">
+        <a href="javascript:void(0)" onclick="openWhatsApp('Services General')" class="btn btn-whatsapp nav-btn">
+          <i class="fa-brands fa-whatsapp"></i> <span>WhatsApp Us</span>
+        </a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Inner Hero -->
+  <section class="inner-hero">
+    <div class="inner-hero-overlay"></div>
+    <div class="container inner-hero-container text-center">
+      <span class="hero-badge"><i class="fa-solid fa-plane"></i> Tailored Journey Planning</span>
+      <h1>Comprehensive Travel Services</h1>
+      <p>From seamless flight reservations and hotel stays to custom tour itineraries, we bring convenience to your travel plans.</p>
+    </div>
+  </section>
+
+  <!-- Service Details Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="services-detail-grid">
+
+        <!-- 01. Flight Booking -->
+        <div class="service-detail-card" id="flights">
+          <div class="service-detail-icon"><i class="fa-solid fa-plane-departure"></i></div>
+          <div class="service-detail-content">
+            <h3>Flight Booking Arrangements</h3>
+            <p>We assist with flight bookings to global destinations, finding routes and times that align with your travel plans and preferred schedules.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> International & regional airline options</li>
+              <li><i class="fa-solid fa-check"></i> Flexible date & itinerary assistance</li>
+              <li><i class="fa-solid fa-check"></i> Multi-city & group booking guidance</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary">Inquire About Flights</a>
+          </div>
+        </div>
+
+        <!-- 02. Hotel Booking -->
+        <div class="service-detail-card" id="hotels">
+          <div class="service-detail-icon"><i class="fa-solid fa-hotel"></i></div>
+          <div class="service-detail-content">
+            <h3>Hotel & Accommodation Booking</h3>
+            <p>Find suitable places to stay based on your comfort, budget, and location preferences across our 24 international destinations.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Handpicked hotels, resorts, & boutique stays</li>
+              <li><i class="fa-solid fa-check"></i> Family-friendly & corporate accommodations</li>
+              <li><i class="fa-solid fa-check"></i> Prime central locations near major attractions</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary">Book Accommodations</a>
+          </div>
+        </div>
+
+        <!-- 03. Customized Tours -->
+        <div class="service-detail-card" id="custom-tours">
+          <div class="service-detail-icon"><i class="fa-solid fa-route"></i></div>
+          <div class="service-detail-content">
+            <h3>Customized Travel Itineraries</h3>
+            <p>Instead of pre-fixed packages, we design personalized journeys based around your preferred travel dates, budget, and destination goals.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Tailored daily schedules & activity planning</li>
+              <li><i class="fa-solid fa-check"></i> Solo, honeymoon, & family travel itineraries</li>
+              <li><i class="fa-solid fa-check"></i> Flexible pace designed around your needs</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary">Plan My Custom Trip</a>
+          </div>
+        </div>
+
+        <!-- 04. Travel Insurance -->
+        <div class="service-detail-card" id="insurance">
+          <div class="service-detail-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="service-detail-content">
+            <h3>Travel & Medical Insurance</h3>
+            <p>Protect your international trips with travel and medical insurance policies required for visa applications and peace of mind abroad.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Emergency medical & hospitalization coverage</li>
+              <li><i class="fa-solid fa-check"></i> Trip interruption & baggage loss assistance</li>
+              <li><i class="fa-solid fa-check"></i> Compliant with Schengen visa requirements</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary">Get Travel Cover</a>
+          </div>
+        </div>
+
+        <!-- 05. Umrah Services -->
+        <div class="service-detail-card" id="umrah">
+          <div class="service-detail-icon"><i class="fa-solid fa-kaaba"></i></div>
+          <div class="service-detail-content">
+            <h3>Umrah Travel Assistance</h3>
+            <p>Dedicated travel and hotel booking assistance to help plan your Umrah journey with peace of mind and convenience.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Makkah & Madinah accommodation assistance</li>
+              <li><i class="fa-solid fa-check"></i> Flight arrangements & ground transport guidance</li>
+              <li><i class="fa-solid fa-check"></i> Family & group itinerary planning</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary">Enquire About Umrah</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Column 1: Brand Info -->
+        <div class="footer-col brand-col">
+          <a href="#" class="footer-logo">
+            <img src="../assets/images/logo.png" alt="Fly2World Logo" class="logo-img">
+            <span class="logo-text">Fly2World</span>
+          </a>
+          <p class="footer-desc">
+            Your trusted travel agency and visa consultancy based in South Africa. We deliver personalized international travel solutions, visa guidance, and custom tour planning.
+          </p>
+          <div class="footer-socials">
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="javascript:void(0)" onclick="openWhatsApp('Footer Social')" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="travel-services.html">Travel Services</a></li>
+    <li><a href="visa-services.html" class="nav-link">Visa Services</a></li>
+    <li><a href="about.html" class="nav-link">About Us</a></li>
+    <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Our Services -->
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <ul class="footer-links">
+            <li><a href="#flights">Flight Arrangements</a></li>
+            <li><a href="#hotels">Hotel Booking</a></li>
+            <li><a href="#custom-tours">Customized Tours</a></li>
+            <li><a href="#insurance">Travel Insurance</a></li>
+            <li><a href="#umrah">Umrah Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact Info -->
+        <div class="footer-col contact-col">
+          <h4>Contact Us</h4>
+          <ul class="contact-list">
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:fly2world1976@gmail.com">fly2world1976@gmail.com</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+27797911043">+27 (0) 79 791 1043</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>South Africa</span>
+            </li>
+          </ul>
+          <a href="javascript:void(0)" onclick="openWhatsApp('Footer Direct')" class="btn btn-whatsapp footer-btn">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Fly2World. All Rights Reserved.</p>
+        <p class="disclaimer">
+          <strong>Disclaimer:</strong> Visa decisions are made exclusively by the relevant embassy/governmental authorities. Fly2World provides consultation, application assistance, and file preparation services.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/whatsapp.js"></script>
+</body>
+</html>
