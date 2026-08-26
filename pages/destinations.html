@@ -457,27 +457,5 @@
   <script src="../assets/js/main.js"></script>
   <script src="../assets/js/whatsapp.js"></script>
   <script src="../assets/js/destinations-modal.js"></script>
-  <script>
-    // Region Filter Mechanics
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const destCards = document.querySelectorAll('.destination-card');
-
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        const filter = btn.dataset.filter;
-
-        destCards.forEach(card => {
-          if (filter === 'all' || card.dataset.region === filter || card.classList.contains('always-visible')) {
-            card.style.display = 'block';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
-    });
-  </script>
 </body>
 </html>

@@ -57,8 +57,9 @@ function closeDestinationModal() {
   document.getElementById('destinationModal').classList.remove('active');
 }
 
-// Close Modal on Overlay Click
+// DOM Event Listeners (Region Filters & Overlay Controls)
 document.addEventListener('DOMContentLoaded', () => {
+  // 1. Modal Overlay Close Listener
   const modalOverlay = document.getElementById('destinationModal');
   if (modalOverlay) {
     modalOverlay.addEventListener('click', (e) => {
@@ -67,4 +68,25 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // 2. Region Filter Mechanics
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const destCards = document.querySelectorAll('.destination-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.dataset.filter;
+
+      destCards.forEach(card => {
+        if (filter === 'all' || card.dataset.region === filter || card.classList.contains('always-visible')) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
 });
