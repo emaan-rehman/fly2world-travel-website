@@ -1,12 +1,41 @@
+/* ==========================================
+   TABLET & SMALL DESKTOP (Max Width: 1024px)
+   ========================================== */
 @media (max-width: 1024px) {
-  .trust-grid { grid-template-columns: repeat(2, 1fr); }
-  .services-grid, .destinations-grid, .visa-cards { grid-template-columns: repeat(2, 1fr); }
-  .steps-grid { grid-template-columns: repeat(2, 1fr); }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .trust-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  .services-grid, 
+  .destinations-grid, 
+  .visa-cards { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  .steps-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  .footer-grid { 
+    grid-template-columns: 1fr 1fr; 
+  }
 }
 
+/* ==========================================
+   LAPTOPS & TABLETS (Max Width: 992px)
+   ========================================== */
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================
+   MOBILE & TABLET BREAKPOINT (Max Width: 768px)
+   ========================================== */
 @media (max-width: 768px) {
-  .hamburger { display: flex; }
+  /* Navigation & Hamburger Fixes */
+  .hamburger { 
+    display: flex !important; 
+  }
+  
   .nav-menu {
     position: absolute;
     top: 100%;
@@ -16,17 +45,19 @@
     padding: 24px;
     box-shadow: var(--shadow-hover);
     display: none;
+    z-index: 999;
   }
-  .nav-menu.active { display: block; }
-  .nav-menu ul { flex-direction: column; gap: 16px; }
-  
-  .hero-content h1 { font-size: 2.2rem; }
-  .why-grid, .split-banner { grid-template-columns: 1fr; }
-  .services-grid, .destinations-grid, .visa-cards, .steps-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr; }
-  .hero-actions { flex-direction: column; }
-}
-@media (max-width: 768px) {
+
+  .nav-menu.active { 
+    display: block; 
+  }
+
+  .nav-menu ul { 
+    flex-direction: column; 
+    gap: 16px; 
+  }
+
+  /* Hero Section Responsiveness */
   .hero-section {
     height: auto;
     min-height: 580px;
@@ -34,16 +65,16 @@
     padding-bottom: 60px;
   }
 
-  .hero-content h1 {
-    font-size: 2.4rem;
+  .hero-content h1 { 
+    font-size: 2.2rem; 
   }
 
   .hero-content p {
     font-size: 1rem;
   }
 
-  .hero-actions {
-    flex-direction: column;
+  .hero-actions { 
+    flex-direction: column; 
     align-items: stretch;
     width: 100%;
   }
@@ -51,21 +82,40 @@
   .hero-actions .btn {
     width: 100%;
   }
-}
-@media (max-width: 768px) {
+
+  /* Grid & Cards Single Column Stacking Fix */
+  .why-grid, 
+  .split-banner,
+  .services-grid, 
+  .destinations-grid, 
+  .visa-cards, 
+  .steps-grid,
+  .about-grid, 
+  .features-grid, 
+  .values-grid,
+  .trust-grid { 
+    grid-template-columns: 1fr !important; 
+  }
+
+  .footer-grid { 
+    grid-template-columns: 1fr; 
+  }
+
   .service-detail-card {
     flex-direction: column;
     padding: 24px;
   }
 }
-@media (max-width: 992px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
+/* ==========================================
+   SMALL MOBILE DEVICES (Max Width: 576px)
+   ========================================== */
 @media (max-width: 576px) {
   .form-row {
     grid-template-columns: 1fr;
+  }
+
+  .nav-btn span {
+    display: none; /* Shows icon only for header WhatsApp button on small screens */
   }
 }

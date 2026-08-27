@@ -1253,3 +1253,29 @@ background: url('../images/hero-bg.jpg') center/cover no-repeat;
   justify-content: center;
   padding: 12px;
 }
+/* ==========================================
+   VALUES GRID STYLES
+   ========================================== */
+.bg-white {
+  background-color: var(--white);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.value-card-padding {
+  padding: 40px 24px;
+}
+
+.value-icon-margin {
+  margin: 0 auto 20px;
+}
+
+.why-desc-muted {
+  margin-top: 12px;
+  color: var(--text-muted);
+}
