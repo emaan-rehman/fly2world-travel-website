@@ -671,7 +671,32 @@
     </div>
   </footer>
 
-  <script src="../assets/js/main.js"></script>
+ <script src="../assets/js/main.js"></script>
   <script src="../assets/js/whatsapp.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const destinationCards = document.querySelectorAll('.destination-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+
+          const filterValue = this.getAttribute('data-filter');
+
+          destinationCards.forEach(card => {
+            const cardRegion = card.getAttribute('data-region');
+
+            if (filterValue === 'all' || cardRegion === filterValue || card.classList.contains('always-visible')) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
 </body>
 </html>
