@@ -309,74 +309,214 @@ body {
 }
 
 /* ==========================================
-   03. INNER PAGE HERO SECTION
+   03. INNER PAGE HERO SECTION (BRAND MATCHED)
    ========================================== */
 .inner-hero {
   position: relative;
-  min-height: 420px;
-  background: url('../images/destinations/destination-hero-bg.jpeg') center/cover no-repeat;
+  min-height: 560px;
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 100px;
-  padding-bottom: 40px;
+  padding: 110px 20px 60px;
   margin-top: 70px;
   overflow: hidden;
 }
 
-.inner-hero-overlay {
+/* Crystal-clear background gradient */
+.hero-bg-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg, 
-    rgba(8, 13, 23, 0.88) 0%, 
-    rgba(8, 13, 23, 0.65) 60%, 
-    rgba(7, 87, 165, 0.45) 100%
-  );
+  background: radial-gradient(circle at center, rgba(11, 26, 44, 0.45) 0%, rgba(5, 14, 26, 0.82) 100%),
+              linear-gradient(180deg, rgba(8, 20, 36, 0.5) 0%, rgba(5, 14, 26, 0.85) 100%);
   z-index: 1;
 }
 
 .inner-hero-container {
   position: relative;
   z-index: 2;
-  max-width: 800px;
+  max-width: 920px;
   margin: 0 auto;
 }
 
-.inner-hero-container .hero-badge {
-  display: inline-block;
-  padding: 6px 18px;
-  background: rgba(45, 155, 239, 0.2);
-  border: 1px solid rgba(45, 155, 239, 0.5);
-  color: #2D9BEF;
-  border-radius: 30px;
-  font-size: 0.85rem;
+/* Premium Badge */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 22px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #FFFFFF !important;
+  border-radius: 50px;
+  font-size: 0.88rem;
   font-weight: 600;
-  letter-spacing: 0.8px;
-  margin-bottom: 18px;
-  backdrop-filter: blur(6px);
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
+.hero-badge i {
+  color: #00E5FF; /* Replaced yellow with cyan */
+}
+
+/* Heading Styling */
 .inner-hero-container h1 {
   font-family: 'Poppins', sans-serif;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 700;
   line-height: 1.2;
   color: #FFFFFF !important;
-  margin-bottom: 16px;
-  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  margin-bottom: 14px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
-.inner-hero-container p {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #F3F4F6 !important;
-  max-width: 640px;
-  margin: 0 auto;
-  opacity: 0.95;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+.accent-gold {
+  color: #00E5FF !important; /* Replaced yellow with cyan brand accent */
+  text-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
 }
+
+.brand-glow {
+  color: #00E5FF;
+}
+
+/* Subtitle */
+.hero-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #E2E8F0 !important;
+  max-width: 720px;
+  margin: 0 auto 28px;
+}
+
+/* Interactive Search Bar */
+.hero-search-box {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 6px 8px 6px 20px;
+  border-radius: 50px;
+  max-width: 680px;
+  margin: 0 auto 16px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.hero-search-box .search-icon {
+  color: #64748B;
+  font-size: 1.2rem;
+  margin-right: 12px;
+}
+
+.hero-search-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  color: #0F172A;
+  background: transparent;
+}
+
+.hero-search-box .btn-search {
+  background: #0052CC;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 40px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.hero-search-box .btn-search:hover {
+  background: #003D99;
+  transform: translateY(-1px);
+}
+
+/* Quick Filter Tag Chips */
+.hero-quick-tags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 35px;
+  font-size: 0.85rem;
+  color: #94A3B8;
+}
+
+.hero-quick-tags button {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hero-quick-tags button:hover {
+  background: #00E5FF;
+  color: #0F172A;
+  border-color: #00E5FF;
+  font-weight: 600;
+}
+
+/* Floating Glassmorphic Stats Container */
+.hero-stats-bar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 16px 36px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.stat-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+}
+
+.stat-box i {
+  font-size: 1.7rem;
+  color: #00E5FF; /* Replaced yellow with cyan */
+}
+
+.stat-box strong {
+  display: block;
+  font-size: 1.15rem;
+  color: #FFFFFF;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.stat-box span {
+  font-size: 0.78rem;
+  color: #94A3B8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
 
 /* ==========================================
    04. TRUST & FEATURES GRID

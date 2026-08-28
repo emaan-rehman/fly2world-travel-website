@@ -48,14 +48,68 @@
   </header>
 
   <!-- Clean Destinations Inner Hero -->
-  <section class="inner-hero">
-    <div class="inner-hero-overlay"></div>
-    <div class="container inner-hero-container text-center">
-      <span class="hero-badge"><i class="fa-solid fa-earth-americas"></i> Worldwide Travel & Visa Assistance</span>
-      <h1>Explore Any Destination With Fly2World Travels</h1>
-      <p>Whether you select from our top featured countries or require visa consultation for any other nation worldwide, we guide your travel journey end-to-end.</p>
+ <section class="inner-hero">
+  <div class="hero-bg-overlay"></div>
+  <div class="container inner-hero-container text-center">
+    
+    <!-- Premium Badge -->
+    <div class="hero-badge">
+      <i class="fa-solid fa-plane-departure"></i> 
+      <span>Worldwide Visa & Travel Assistance</span>
     </div>
-  </section>
+
+    <!-- High Impact Heading -->
+    <h1>Where Do You Want To <span class="accent-gold">Fly Next?</span></h1>
+    <p class="hero-subtitle">
+      Explore top destinations, check visa requirements, and plan your journey with <strong class="brand-glow">Fly2World Travels</strong>.
+    </p>
+
+    <!-- Interactive Destination Search Bar -->
+    <div class="hero-search-box">
+      <i class="fa-solid fa-magnifying-glass search-icon"></i>
+      <input type="text" id="heroCountrySearch" placeholder="Type a country name (e.g. United Kingdom, UAE, Japan)..." onkeyup="filterDestinationsFromHero()">
+      <button class="btn-search"><i class="fa-solid fa-compass"></i> Explore</button>
+    </div>
+
+    <!-- Quick Filter Tags -->
+    <div class="hero-quick-tags">
+      <span>Popular Searches:</span>
+      <button onclick="quickSearch('United Kingdom')">UK</button>
+      <button onclick="quickSearch('United Arab Emirates')">Dubai / UAE</button>
+      <button onclick="quickSearch('Turkey')">Turkey</button>
+      <button onclick="quickSearch('Japan')">Japan</button>
+      <button onclick="quickSearch('South Africa')">South Africa</button>
+    </div>
+
+    <!-- Floating Glass Stats Bar -->
+    <div class="hero-stats-bar">
+      <div class="stat-box">
+        <i class="fa-solid fa-passport"></i>
+        <div>
+          <strong>98%</strong>
+          <span>Visa Approval Rate</span>
+        </div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-box">
+        <i class="fa-solid fa-globe"></i>
+        <div>
+          <strong>45+</strong>
+          <span>Global Destinations</span>
+        </div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-box">
+        <i class="fa-solid fa-headset"></i>
+        <div>
+          <strong>24/7</strong>
+          <span>Direct Guidance</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
   <!-- Filterable Destinations Section -->
   <section class="section-padding">
@@ -674,6 +728,31 @@
  <script src="../assets/js/main.js"></script>
   <script src="../assets/js/whatsapp.js"></script>
   <script>
+
+    // Live filtering from Hero Search Bar
+  function filterDestinationsFromHero() {
+    const input = document.getElementById('heroCountrySearch').value.toLowerCase();
+    const cards = document.querySelectorAll('.destination-card');
+
+    cards.forEach(card => {
+      const countryName = card.querySelector('h3') ? card.querySelector('h3').innerText.toLowerCase() : '';
+      if (countryName.includes(input) || card.classList.contains('always-visible')) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // Quick tag search handler
+  function quickSearch(country) {
+    const searchInput = document.getElementById('heroCountrySearch');
+    searchInput.value = country;
+    filterDestinationsFromHero();
+    
+    // Smooth scroll down to grid
+    document.getElementById('destinationsGrid').scrollIntoView({ behavior: 'smooth' });
+  }
     document.addEventListener('DOMContentLoaded', function () {
       const filterBtns = document.querySelectorAll('.filter-btn');
       const destinationCards = document.querySelectorAll('.destination-card');
