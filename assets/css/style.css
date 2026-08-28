@@ -308,7 +308,167 @@ body {
   margin-top: 70px;
   overflow: hidden;
 }
+/* ==========================================
+   TRAVEL SERVICES HERO (LIGHT & CLEAR IMAGE)
+   ========================================== */
+.travel-services-traditional-hero {
+  position: relative;
+  min-height: 560px;
+  background: url('../images/travelservices-hero-bg.jpeg') center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px 70px;
+  margin-top: 70px;
+  overflow: hidden;
+}
 
+/* Lightened Overlay: Lets image details (camera, passport, watch) pop through cleanly */
+.travel-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg, 
+    rgba(15, 23, 42, 0.45) 0%, 
+    rgba(15, 23, 42, 0.35) 50%, 
+    rgba(15, 23, 42, 0.55) 100%
+  );
+  z-index: 1;
+}
+
+.travel-hero-container {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Glass Badge with Darker Backdrop for Readability */
+.travel-services-traditional-hero .hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 22px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #FFFFFF !important;
+  border-radius: 50px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 22px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.travel-services-traditional-hero .hero-badge i {
+  color: #00E5FF;
+}
+
+/* Heading with Strong Dark Drop Shadow for Crisp Readability */
+.travel-hero-container h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #FFFFFF !important;
+  margin-bottom: 16px;
+  text-shadow: 0 4px 25px rgba(0, 0, 0, 0.9), 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.accent-cyan {
+  color: #00E5FF !important;
+  text-shadow: 0 0 20px rgba(0, 229, 255, 0.6), 0 3px 12px rgba(0, 0, 0, 0.9);
+}
+
+/* Subtitle */
+.travel-hero-subtitle,
+.travel-hero-container .hero-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: #FFFFFF !important;
+  max-width: 740px;
+  margin: 0 auto 28px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9), 0 1px 4px rgba(0, 0, 0, 0.9);
+  font-weight: 500;
+}
+
+/* Solid Glassmorphic Service Tags */
+.travel-service-tags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+
+.travel-service-tags span {
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.travel-service-tags span:hover {
+  border-color: #00E5FF;
+  transform: translateY(-2px);
+}
+
+.travel-service-tags span i {
+  color: #00E5FF;
+  margin-right: 8px;
+}
+
+/* Action Buttons */
+.travel-hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.travel-hero-actions .btn-primary {
+  background-color: #0757A5;
+  border: 2px solid #0757A5;
+  padding: 14px 32px;
+  font-size: 1rem;
+  box-shadow: 0 8px 20px rgba(7, 87, 165, 0.35);
+}
+
+.travel-hero-actions .btn-primary:hover {
+  background-color: #2D9BEF;
+  border-color: #2D9BEF;
+  transform: translateY(-2px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .travel-services-traditional-hero {
+    min-height: auto;
+    padding: 110px 15px 50px;
+  }
+
+  .travel-hero-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .travel-hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .travel-hero-actions .btn {
+    width: 100%;
+  }
+}
 /* ==========================================
    ELEGANT 2-COLUMN SPLIT VISA HERO
    ========================================== */
