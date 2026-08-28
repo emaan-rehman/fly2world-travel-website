@@ -65,7 +65,7 @@ body {
 .btn-primary { background: var(--blue); color: var(--white); }
 .btn-primary:hover { background: var(--sky); transform: translateY(-2px); }
 
-.btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.4); }
+.btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255, 255, 255, 0.4); }
 .btn-outline:hover { background: var(--white); color: var(--navy); border-color: var(--white); }
 
 .btn-whatsapp { background: #25D366; color: var(--white); }
@@ -220,9 +220,9 @@ body {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    135deg, 
-    rgba(8, 13, 23, 0.82) 0%, 
-    rgba(8, 13, 23, 0.55) 60%, 
+    135deg,
+    rgba(8, 13, 23, 0.82) 0%,
+    rgba(8, 13, 23, 0.55) 60%,
     rgba(7, 87, 165, 0.4) 100%
   );
   z-index: 1;
@@ -309,7 +309,6 @@ body {
   overflow: hidden;
 }
 
-/* Specific background fix for Visa Services Hero page */
 /* ==========================================
    ELEGANT 2-COLUMN SPLIT VISA HERO
    ========================================== */
@@ -318,6 +317,153 @@ body {
   padding: 130px 0 70px;
   position: relative;
   overflow: hidden;
+}
+/* ==========================================
+   ELEGANT 2-COLUMN SPLIT DESTINATIONS HERO
+   ========================================== */
+.destinations-split-hero {
+  background: #F8FAFC;
+  padding: 130px 0 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+.dest-split-container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.dest-hero-content {
+  text-align: left;
+}
+
+.dest-hero-content .hero-badge {
+  background: rgba(7, 87, 165, 0.08);
+  border: 1px solid rgba(7, 87, 165, 0.2);
+  color: #0757A5 !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.dest-hero-content h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0F172A !important;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.dest-hero-content .hero-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  color: #475569 !important;
+  line-height: 1.65;
+  margin-bottom: 28px;
+}
+
+/* Search Box Styling for Light Background */
+.dest-hero-content .hero-search-box {
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  padding: 6px 8px 6px 20px;
+  border-radius: 50px;
+  max-width: 100%;
+  margin: 0 0 16px 0;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  border: 1px solid #E2E8F0;
+}
+
+.dest-hero-content .hero-search-box .search-icon {
+  color: #64748B;
+  font-size: 1.1rem;
+  margin-right: 12px;
+}
+
+.dest-hero-content .hero-search-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  color: #0F172A;
+  background: transparent;
+}
+
+.dest-hero-content .hero-search-box .btn-search {
+  background: #0757A5;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 40px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.dest-hero-content .hero-search-box .btn-search:hover {
+  background: #2D9BEF;
+  transform: translateY(-1px);
+}
+
+/* Quick Tags */
+.dest-hero-content .hero-quick-tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #64748B;
+}
+
+.dest-hero-content .hero-quick-tags button {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #334155;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dest-hero-content .hero-quick-tags button:hover {
+  background: #0757A5;
+  color: #FFFFFF;
+  border-color: #0757A5;
+  font-weight: 600;
+}
+
+/* Right Column Image & Framing */
+.dest-hero-image-wrapper {
+  position: relative;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+  .dest-split-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .dest-hero-content {
+    text-align: center;
+  }
+  .dest-hero-content .hero-quick-tags {
+    justify-content: center;
+  }
 }
 
 .visa-split-container {
@@ -459,31 +605,6 @@ body {
 .floating-badge span {
   font-size: 0.75rem;
   color: #64748B;
-}
-
-/* Responsive Styles */
-@media (max-width: 992px) {
-  .visa-split-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  .visa-hero-content {
-    text-align: center;
-  }
-  .visa-hero-features {
-    align-items: center;
-  }
-  .hero-cta-buttons {
-    justify-content: center;
-  }
-  .floating-badge {
-    position: relative;
-    top: auto;
-    left: auto;
-    right: auto;
-    bottom: auto;
-    margin-top: 15px;
-  }
 }
 
 .inner-hero-container {
@@ -1039,11 +1160,11 @@ body {
 }
 
 .banner-custom {
-  background: linear-gradient(rgba(8,13,23,0.75), rgba(8,13,23,0.75)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop') center/cover;
+  background: linear-gradient(rgba(8, 13, 23, 0.75), rgba(8, 13, 23, 0.75)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop') center/cover;
 }
 
 .banner-umrah {
-  background: linear-gradient(rgba(8,13,23,0.75), rgba(8,13,23,0.75)), url('https://images.unsplash.com/photo-1565552070098-0073a8ad65a7?q=80&w=800&auto=format&fit=crop') center/cover;
+  background: linear-gradient(rgba(8, 13, 23, 0.75), rgba(8, 13, 23, 0.75)), url('https://images.unsplash.com/photo-1565552070098-0073a8ad65a7?q=80&w=800&auto=format&fit=crop') center/cover;
 }
 
 /* Steps */
@@ -1367,7 +1488,7 @@ body {
   justify-content: center;
   color: var(--white);
   font-size: 1.8rem;
-  box-shadow: 0 8px 24px rgba(37,211,102,0.4);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
   z-index: 999;
   text-decoration: none;
   transition: var(--transition);
@@ -1510,6 +1631,30 @@ body {
 /* ==========================================
    11. RESPONSIVE MEDIA QUERIES
    ========================================== */
+@media (max-width: 992px) {
+  .visa-split-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .visa-hero-content {
+    text-align: center;
+  }
+  .visa-hero-features {
+    align-items: center;
+  }
+  .hero-cta-buttons {
+    justify-content: center;
+  }
+  .floating-badge {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin-top: 15px;
+  }
+}
+
 @media (max-width: 768px) {
   .inner-hero-container h1,
   .visa-hero h1 {

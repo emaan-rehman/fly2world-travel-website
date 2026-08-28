@@ -48,62 +48,52 @@
   </header>
 
   <!-- Clean Destinations Inner Hero -->
- <section class="inner-hero">
-  <div class="hero-bg-overlay"></div>
-  <div class="container inner-hero-container text-center">
+ <section class="destinations-split-hero">
+  <div class="container dest-split-container">
     
-    <!-- Premium Badge -->
-    <div class="hero-badge">
-      <i class="fa-solid fa-plane-departure"></i> 
-      <span>Worldwide Visa & Travel Assistance</span>
-    </div>
+    <div class="dest-hero-content">
+      <span class="hero-badge">
+        <i class="fa-solid fa-earth-americas"></i> Explore Top Countries
+      </span>
+      <h1>Where Do You Want To <span class="accent-blue">Fly Next?</span></h1>
+      <p class="hero-desc">
+        Explore 40+ featured destinations, check visa requirements, and let <strong class="brand-glow">Fly2World Travels</strong> handle your end-to-end travel guidance.
+      </p>
 
-    <!-- High Impact Heading -->
-    <h1>Where Do You Want To <span class="accent-gold">Fly Next?</span></h1>
-    <p class="hero-subtitle">
-      Explore top destinations, check visa requirements, and plan your journey with <strong class="brand-glow">Fly2World Travels</strong>.
-    </p>
-
-    <!-- Interactive Destination Search Bar -->
-    <div class="hero-search-box">
-      <i class="fa-solid fa-magnifying-glass search-icon"></i>
-      <input type="text" id="heroCountrySearch" placeholder="Type a country name (e.g. United Kingdom, UAE, Japan)..." onkeyup="filterDestinationsFromHero()">
-      <button class="btn-search"><i class="fa-solid fa-compass"></i> Explore</button>
-    </div>
-
-    <!-- Quick Filter Tags -->
-    <div class="hero-quick-tags">
-      <span>Popular Searches:</span>
-      <button onclick="quickSearch('United Kingdom')">UK</button>
-      <button onclick="quickSearch('United Arab Emirates')">Dubai / UAE</button>
-      <button onclick="quickSearch('Turkey')">Turkey</button>
-      <button onclick="quickSearch('Japan')">Japan</button>
-      <button onclick="quickSearch('South Africa')">South Africa</button>
-    </div>
-
-    <!-- Floating Glass Stats Bar -->
-    <div class="hero-stats-bar">
-      <div class="stat-box">
-        <i class="fa-solid fa-passport"></i>
-        <div>
-          <strong>98%</strong>
-          <span>Visa Approval Rate</span>
-        </div>
+      <div class="hero-search-box">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="heroCountrySearch" placeholder="Type a country name (e.g. UK, Turkey, Japan)..." onkeyup="filterDestinationsFromHero()">
+        <button class="btn-search"><i class="fa-solid fa-compass"></i> Search</button>
       </div>
-      <div class="stat-divider"></div>
-      <div class="stat-box">
+
+      <div class="hero-quick-tags">
+        <span>Popular:</span>
+        <button onclick="quickSearch('United Kingdom')">UK</button>
+        <button onclick="quickSearch('United Arab Emirates')">Dubai / UAE</button>
+        <button onclick="quickSearch('Turkey')">Turkey</button>
+        <button onclick="quickSearch('Japan')">Japan</button>
+        <button onclick="quickSearch('South Africa')">South Africa</button>
+      </div>
+    </div>
+
+    <div class="dest-hero-image-wrapper">
+      <div class="image-frame">
+        <img src="../assets/images/destinations/destination-hero-bg.jpeg" alt="Global Travel Destinations">
+      </div>
+      
+      <div class="floating-badge badge-top-right">
         <i class="fa-solid fa-globe"></i>
         <div>
-          <strong>45+</strong>
-          <span>Global Destinations</span>
+          <strong>40+ Countries</strong>
+          <span>Global Reach</span>
         </div>
       </div>
-      <div class="stat-divider"></div>
-      <div class="stat-box">
-        <i class="fa-solid fa-headset"></i>
+
+      <div class="floating-badge badge-bottom-left">
+        <i class="fa-solid fa-plane-circle-check icon-green"></i>
         <div>
-          <strong>24/7</strong>
-          <span>Direct Guidance</span>
+          <strong>Direct Guidance</strong>
+          <span>Visa & Flights</span>
         </div>
       </div>
     </div>
