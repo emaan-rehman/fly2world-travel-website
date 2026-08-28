@@ -470,13 +470,12 @@ body {
   }
 }
 /* ==========================================
-   ABOUT US HERO (LEFT-ALIGNED TEXT WITH ARROW BG)
+   MINIMAL FULL-WIDTH ABOUT US HERO
    ========================================== */
-.about-hero {
+.about-minimal-hero {
   position: relative;
-  min-height: 540px;
-  /* Brick wall with orange arrow background image */
-  background: url('../images/about-hero-bg.jpeg') center right / cover no-repeat;
+  min-height: 520px;
+  background: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80') center right / cover no-repeat;
   display: flex;
   align-items: center;
   padding: 120px 0 60px;
@@ -484,15 +483,15 @@ body {
   overflow: hidden;
 }
 
-/* Gradient Overlay: Dark on left for high contrast text, transparent on right for arrow visibility */
+/* Smooth gradient overlay: Dark on left for text readability, fading completely on right */
 .about-hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     90deg, 
-    rgba(10, 20, 36, 0.95) 0%, 
-    rgba(10, 20, 36, 0.82) 45%, 
-    rgba(10, 20, 36, 0.25) 100%
+    rgba(8, 18, 32, 0.92) 0%, 
+    rgba(8, 18, 32, 0.75) 45%, 
+    rgba(8, 18, 32, 0.15) 100%
   );
   z-index: 1;
 }
@@ -503,41 +502,32 @@ body {
   width: 100%;
 }
 
-/* Left-Aligned Text Content Container */
 .about-hero-content {
-  max-width: 580px;
+  max-width: 620px;
   text-align: left;
 }
 
-.about-hero-content h1 {
-  font-size: 3.2rem;
-  line-height: 1.25;
-  margin-bottom: 18px;
-}
-
-/* Glass Badge */
+/* Badge */
 .about-hero-content .hero-badge {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 22px;
-  background: rgba(15, 23, 42, 0.65);
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  gap: 8px;
+  padding: 6px 18px;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   color: #FFFFFF !important;
-  border-radius: 50px;
-  font-size: 0.88rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 20px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
 }
 
 .about-hero-content .hero-badge i {
   color: #00E5FF;
 }
 
-/* Heading Styling */
+/* Heading */
 .about-hero-content h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 3.4rem;
@@ -559,57 +549,55 @@ body {
   font-size: 1.1rem;
   line-height: 1.65;
   color: #E2E8F0 !important;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
-.about-hero-highlights {
+/* Inline Value Chips (No Boxes) */
+.about-inline-features {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
-.highlight-pill {
+.about-inline-features span {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #F8FAFC;
+  gap: 8px;
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  backdrop-filter: blur(8px);
 }
 
-.highlight-pill i {
+.about-inline-features span i {
   color: #00E5FF;
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-  .about-hero {
+  .about-minimal-hero {
     min-height: auto;
     padding: 110px 15px 50px;
     background-position: center center;
   }
-
   .about-hero-overlay {
-    background: rgba(10, 20, 36, 0.88);
+    background: rgba(8, 18, 32, 0.88);
   }
-
   .about-hero-content {
     max-width: 100%;
     text-align: center;
   }
-
-  .about-hero-actions {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .about-hero-actions .btn {
-    width: 100%;
-  }
-
   .about-hero-content h1 {
     font-size: 2.3rem;
+  }
+  .about-inline-features {
+    justify-content: center;
   }
 }
 /* ==========================================

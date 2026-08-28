@@ -65,7 +65,7 @@
               <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
               <div>
                 <h4>Email Support</h4>
-             <a href="mailto:infofly2worldtravels@gmail.com">infofly2worldtravels@gmail.com</a>
+                <a href="mailto:infofly2worldtravels@gmail.com">infofly2worldtravels@gmail.com</a>
               </div>
             </div>
 
@@ -105,7 +105,7 @@
               </div>
               <div class="form-group">
                 <label for="emailAddr">Email Address</label>
-                <input type="email" id="emailAddr" >
+                <input type="email" id="emailAddr">
               </div>
             </div>
 
@@ -125,67 +125,186 @@
                 </select>
               </div>
 
-              <!-- Updated Select Input for URL Auto-Fill -->
+              <!-- Comprehensive Worldwide Destination Selection -->
               <div class="form-group">
                 <label for="destinationSelect">Where would you like to go? *</label>
-              <select id="destinationSelect" name="destination" required onchange="toggleCustomCountryInput(this)">
+                <select id="destinationSelect" name="destination" required onchange="toggleCustomCountryInput(this)">
                   <option value="" disabled selected>Select a Destination</option>
-                  <optgroup label="Europe">
-                    <option value="Spain">Spain</option>
-                    <option value="Italy">Italy</option>
-                    <option value="France">France</option>
-                    <option value="Netherlands">Netherlands</option>
-                    <option value="Romania">Romania</option>
-                    <option value="Portugal">Portugal</option>
-                    <option value="Germany">Germany</option>
+
+                  <optgroup label="Popular Destinations">
                     <option value="United Kingdom">United Kingdom</option>
-                  </optgroup>
-                  <optgroup label="Americas">
-                    <option value="United States (USA)">United States (USA)</option>
-                    <option value="Uruguay">Uruguay</option>
-                    <option value="Canada">Canada</option>
-                    <option value="Brazil">Brazil</option>
-                  </optgroup>
-                  <optgroup label="Oceania">
-                    <option value="New Zealand">New Zealand</option>
-                    <option value="Australia">Australia</option>
-                  </optgroup>
-                  <optgroup label="Asia">
+                    <option value="United Arab Emirates">United Arab Emirates (Dubai)</option>
+                    <option value="Saudi Arabia">Saudi Arabia (Umrah/Visit)</option>
+                    <option value="Schengen Zone (Europe)">Schengen Area (Europe)</option>
                     <option value="Turkey">Turkey</option>
                     <option value="Thailand">Thailand</option>
-                    <option value="Malaysia">Malaysia</option>
+                    <option value="United States">United States (USA)</option>
+                  </optgroup>
+
+                  <optgroup label="Europe">
+                    <option value="Albania">Albania</option>
+                    <option value="Andorra">Andorra</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Belarus">Belarus</option>
+                    <option value="Belgium">Belgium</option>
+                    <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                    <option value="Bulgaria">Bulgaria</option>
+                    <option value="Croatia">Croatia</option>
+                    <option value="Cyprus">Cyprus</option>
+                    <option value="Czech Republic">Czech Republic</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="Estonia">Estonia</option>
+                    <option value="Finland">Finland</option>
+                    <option value="France">France</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Greece">Greece</option>
+                    <option value="Hungary">Hungary</option>
+                    <option value="Iceland">Iceland</option>
+                    <option value="Ireland">Ireland</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Latvia">Latvia</option>
+                    <option value="Liechtenstein">Liechtenstein</option>
+                    <option value="Lithuania">Lithuania</option>
+                    <option value="Luxembourg">Luxembourg</option>
+                    <option value="Malta">Malta</option>
+                    <option value="Moldova">Moldova</option>
+                    <option value="Monaco">Monaco</option>
+                    <option value="Montenegro">Montenegro</option>
+                    <option value="Netherlands">Netherlands</option>
+                    <option value="North Macedonia">North Macedonia</option>
+                    <option value="Norway">Norway</option>
+                    <option value="Poland">Poland</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Romania">Romania</option>
+                    <option value="San Marino">San Marino</option>
+                    <option value="Serbia">Serbia</option>
+                    <option value="Slovakia">Slovakia</option>
+                    <option value="Slovenia">Slovenia</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Vatican City">Vatican City</option>
+                  </optgroup>
+
+                  <optgroup label="Asia & Middle East">
+                    <option value="Armenia">Armenia</option>
+                    <option value="Azerbaijan">Azerbaijan</option>
+                    <option value="Bahrain">Bahrain</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Bhutan">Bhutan</option>
+                    <option value="Brunei">Brunei</option>
+                    <option value="Cambodia">Cambodia</option>
                     <option value="China">China</option>
+                    <option value="Hong Kong">Hong Kong</option>
+                    <option value="India">India</option>
+                    <option value="Indonesia">Indonesia</option>
                     <option value="Japan">Japan</option>
-                  </optgroup>
-                  <optgroup label="Middle East">
-                    <option value="United Arab Emirates">United Arab Emirates</option>
+                    <option value="Jordan">Jordan</option>
+                    <option value="Kazakhstan">Kazakhstan</option>
+                    <option value="Kuwait">Kuwait</option>
+                    <option value="Kyrgyzstan">Kyrgyzstan</option>
+                    <option value="Laos">Laos</option>
+                    <option value="Lebanon">Lebanon</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Maldives">Maldives</option>
+                    <option value="Mongolia">Mongolia</option>
+                    <option value="Nepal">Nepal</option>
+                    <option value="Oman">Oman</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="Philippines">Philippines</option>
+                    <option value="Qatar">Qatar</option>
                     <option value="Saudi Arabia">Saudi Arabia</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="South Korea">South Korea</option>
+                    <option value="Sri Lanka">Sri Lanka</option>
+                    <option value="Taiwan">Taiwan</option>
+                    <option value="Tajikistan">Tajikistan</option>
+                    <option value="Thailand">Thailand</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="Turkmenistan">Turkmenistan</option>
+                    <option value="United Arab Emirates">United Arab Emirates</option>
+                    <option value="Uzbekistan">Uzbekistan</option>
+                    <option value="Vietnam">Vietnam</option>
                   </optgroup>
+
+                  <optgroup label="Americas">
+                    <option value="Argentina">Argentina</option>
+                    <option value="Bahamas">Bahamas</option>
+                    <option value="Barbados">Barbados</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Costa Rica">Costa Rica</option>
+                    <option value="Cuba">Cuba</option>
+                    <option value="Dominican Republic">Dominican Republic</option>
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="Guatemala">Guatemala</option>
+                    <option value="Jamaica">Jamaica</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Panama">Panama</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Peru">Peru</option>
+                    <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                    <option value="United States">United States</option>
+                    <option value="Uruguay">Uruguay</option>
+                  </optgroup>
+
                   <optgroup label="Africa">
-                    <option value="Zimbabwe">Zimbabwe</option>
+                    <option value="Algeria">Algeria</option>
+                    <option value="Angola">Angola</option>
+                    <option value="Botswana">Botswana</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="Ethiopia">Ethiopia</option>
                     <option value="Eswatini">Eswatini</option>
+                    <option value="Ghana">Ghana</option>
+                    <option value="Kenya">Kenya</option>
                     <option value="Lesotho">Lesotho</option>
+                    <option value="Madagascar">Madagascar</option>
+                    <option value="Mauritius">Mauritius</option>
+                    <option value="Morocco">Morocco</option>
+                    <option value="Mozambique">Mozambique</option>
+                    <option value="Namibia">Namibia</option>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="Rwanda">Rwanda</option>
+                    <option value="Seychelles">Seychelles</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="Tanzania">Tanzania</option>
+                    <option value="Tunisia">Tunisia</option>
+                    <option value="Uganda">Uganda</option>
+                    <option value="Zambia">Zambia</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
                   </optgroup>
+
+                  <optgroup label="Oceania">
+                    <option value="Australia">Australia</option>
+                    <option value="Fiji">Fiji</option>
+                    <option value="New Zealand">New Zealand</option>
+                  </optgroup>
+
                   <optgroup label="Other">
                     <option value="Any Other Country">Any Other Unlisted Country</option>
                   </optgroup>
                 </select>
-                 </div>
-     <div id="customCountryWrap" style="display: none; margin-top: 10px;">
-  <input type="text" id="customCountryInput" class="form-control" placeholder="Specify your destination country...">
-</div>
-             
+              </div>
+
+              <div id="customCountryWrap" style="display: none; margin-top: 10px;">
+                <input type="text" id="customCountryInput" class="form-control" placeholder="Specify your destination country...">
+              </div>
             </div>
 
             <!-- Separated Country of Departure & Passport Fields -->
             <div class="form-row">
               <div class="form-group">
                 <label for="departingCountry">Country of Departure *</label>
-                <input type="text" id="departingCountry" required>
+                <input type="text" id="departingCountry" required placeholder="e.g. South Africa, UAE, UK">
               </div>
               <div class="form-group">
                 <label for="passportCountry">Passport Country *</label>
-                <input type="text" id="passportCountry" required>
+                <input type="text" id="passportCountry" required placeholder="e.g. India, Pakistan, Nigeria">
               </div>
             </div>
 
@@ -262,7 +381,7 @@
           <ul class="contact-list">
             <li>
               <i class="fa-solid fa-envelope"></i>
-          <a href="mailto:infofly2worldtravels@gmail.com">infofly2worldtravels@gmail.com</a>
+              <a href="mailto:infofly2worldtravels@gmail.com">infofly2worldtravels@gmail.com</a>
             </li>
             <li>
               <i class="fa-solid fa-phone"></i>
@@ -303,70 +422,67 @@
   
   <!-- Dual-Action Handler Script -->
   <script>
-  // Toggle custom text field when "Any Other Country" is selected
-function toggleCustomCountryInput(selectEl) {
-  const customWrap = document.getElementById('customCountryWrap');
-  const customInput = document.getElementById('customCountryInput');
+  function toggleCustomCountryInput(selectEl) {
+    const customWrap = document.getElementById('customCountryWrap');
+    const customInput = document.getElementById('customCountryInput');
 
-  if (selectEl.value === 'Any Other Country') {
-    customWrap.style.display = 'block';
-    customInput.required = true;
-    customInput.focus();
-  } else {
-    customWrap.style.display = 'none';
-    customInput.required = false;
-    customInput.value = '';
+    if (selectEl.value === 'Any Other Country') {
+      customWrap.style.display = 'block';
+      customInput.required = true;
+      customInput.focus();
+    } else {
+      customWrap.style.display = 'none';
+      customInput.required = false;
+      customInput.value = '';
+    }
   }
-}
 
-// Updated handleFormSubmit script
-function handleFormSubmit(event) {
-  event.preventDefault();
-  
-  const form = document.getElementById('inquiryForm');
-  const submitBtn = form.querySelector('button[type="submit"]');
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    
+    const form = document.getElementById('inquiryForm');
+    const submitBtn = form.querySelector('button[type="submit"]');
 
-  // Determine destination string
-  const selectedDest = document.getElementById('destinationSelect').value;
-  const customDest = document.getElementById('customCountryInput').value.trim();
-  const finalDestination = (selectedDest === 'Any Other Country' && customDest) ? customDest : selectedDest;
+    const selectedDest = document.getElementById('destinationSelect').value;
+    const customDest = document.getElementById('customCountryInput').value.trim();
+    const finalDestination = (selectedDest === 'Any Other Country' && customDest) ? customDest : selectedDest;
 
-  const templateParams = {
-    full_name: document.getElementById('fullName').value,
-    whatsapp_num: document.getElementById('whatsappNum').value,
-    email_addr: document.getElementById('emailAddr').value || 'Not provided',
-    service_type: document.getElementById('serviceType').value,
-    destination: finalDestination,
-    departing_country: document.getElementById('departingCountry').value,
-    passport_country: document.getElementById('passportCountry').value,
-    depart_date: document.getElementById('departDate').value || 'Flexible',
-    return_date: document.getElementById('returnDate').value || 'Flexible',
-    message: document.getElementById('message').value || 'None'
-  };
+    const templateParams = {
+      full_name: document.getElementById('fullName').value,
+      whatsapp_num: document.getElementById('whatsappNum').value,
+      email_addr: document.getElementById('emailAddr').value || 'Not provided',
+      service_type: document.getElementById('serviceType').value,
+      destination: finalDestination,
+      departing_country: document.getElementById('departingCountry').value,
+      passport_country: document.getElementById('passportCountry').value,
+      depart_date: document.getElementById('departDate').value || 'Flexible',
+      return_date: document.getElementById('returnDate').value || 'Flexible',
+      message: document.getElementById('message').value || 'None'
+    };
 
-  const waText = `Hello Fly2World! I have a new travel inquiry:\n\n*Name:* ${templateParams.full_name}\n*Phone:* ${templateParams.whatsapp_num}\n*Email:* ${templateParams.email_addr}\n*Service Requested:* ${templateParams.service_type}\n*Destination:* ${templateParams.destination}\n*Departing From:* ${templateParams.departing_country}\n*Passport Held:* ${templateParams.passport_country}\n*Departure Date:* ${templateParams.depart_date}\n*Return Date:* ${templateParams.return_date}\n*Details:* ${templateParams.message}`;
-  const waUrl = `https://wa.me/27797911043?text=${encodeURIComponent(waText)}`;
+    const waText = `Hello Fly2World! I have a new travel inquiry:\n\n*Name:* ${templateParams.full_name}\n*Phone:* ${templateParams.whatsapp_num}\n*Email:* ${templateParams.email_addr}\n*Service Requested:* ${templateParams.service_type}\n*Destination:* ${templateParams.destination}\n*Departing From:* ${templateParams.departing_country}\n*Passport Held:* ${templateParams.passport_country}\n*Departure Date:* ${templateParams.depart_date}\n*Return Date:* ${templateParams.return_date}\n*Details:* ${templateParams.message}`;
+    const waUrl = `https://wa.me/27797911043?text=${encodeURIComponent(waText)}`;
 
-  submitBtn.disabled = true;
-  submitBtn.innerText = "Sending Inquiry...";
+    submitBtn.disabled = true;
+    submitBtn.innerText = "Sending Inquiry...";
 
-  emailjs.send("service_6cwff1a", "template_hcqu0hz", templateParams)
-    .then(function(response) {
-      window.open(waUrl, '_blank');
-      alert("Success! Your travel inquiry has been emailed to Fly2World and prepared for WhatsApp.");
-      form.reset();
-      document.getElementById('customCountryWrap').style.display = 'none';
-    })
-    .catch(function(error) {
-      console.error("EmailJS dispatch failed:", error);
-      window.open(waUrl, '_blank');
-      alert("Your inquiry has been prepared for WhatsApp!");
-    })
-    .finally(function() {
-      submitBtn.disabled = false;
-      submitBtn.innerText = "Send Inquiry";
-    });
-}
+    emailjs.send("service_6cwff1a", "template_hcqu0hz", templateParams)
+      .then(function(response) {
+        window.open(waUrl, '_blank');
+        alert("Success! Your travel inquiry has been emailed to Fly2World and prepared for WhatsApp.");
+        form.reset();
+        document.getElementById('customCountryWrap').style.display = 'none';
+      })
+      .catch(function(error) {
+        console.error("EmailJS dispatch failed:", error);
+        window.open(waUrl, '_blank');
+        alert("Your inquiry has been prepared for WhatsApp!");
+      })
+      .finally(function() {
+        submitBtn.disabled = false;
+        submitBtn.innerText = "Send Inquiry";
+      });
+  }
   </script>
 </body>
 </html>
