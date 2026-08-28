@@ -239,20 +239,6 @@ body {
   color: #FFFFFF;
 }
 
-.hero-badge {
-  display: inline-block;
-  padding: 6px 16px;
-  background: rgba(45, 155, 239, 0.15);
-  border: 1px solid rgba(45, 155, 239, 0.4);
-  color: #2D9BEF;
-  border-radius: 30px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  margin-bottom: 20px;
-  backdrop-filter: blur(4px);
-}
-
 .hero-content h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 3.6rem;
@@ -309,12 +295,12 @@ body {
 }
 
 /* ==========================================
-   03. INNER PAGE HERO SECTION (BRAND MATCHED)
+   03. INNER PAGE HERO SECTION & VARIANTS
    ========================================== */
 .inner-hero {
   position: relative;
   min-height: 560px;
-  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  background: url('../images/destinations/destination-hero-bg.jpeg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -323,13 +309,181 @@ body {
   overflow: hidden;
 }
 
-/* Crystal-clear background gradient */
-.hero-bg-overlay {
+/* Specific background fix for Visa Services Hero page */
+/* ==========================================
+   ELEGANT 2-COLUMN SPLIT VISA HERO
+   ========================================== */
+.visa-split-hero {
+  background: #F8FAFC;
+  padding: 130px 0 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+.visa-split-container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
+  align-items: center;
+}
+
+/* Left Content */
+.visa-hero-content {
+  text-align: left;
+}
+
+.visa-hero-content .hero-badge {
+  background: rgba(7, 87, 165, 0.08);
+  border: 1px solid rgba(7, 87, 165, 0.2);
+  color: #0757A5 !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.visa-hero-content h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0F172A !important;
+  line-height: 1.2;
+  margin-bottom: 18px;
+  text-shadow: none !important;
+}
+
+.accent-blue {
+  color: #0757A5 !important;
+}
+
+.visa-hero-content .hero-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  color: #475569 !important;
+  line-height: 1.65;
+  margin-bottom: 28px;
+}
+
+/* Feature Check Pills */
+.visa-hero-features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.feature-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1E293B;
+}
+
+.feature-pill i {
+  color: #00E5FF;
+  font-size: 1.1rem;
+}
+
+.hero-cta-buttons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+/* Right Column Image & Framing */
+.visa-hero-image-wrapper {
+  position: relative;
+}
+
+.image-frame {
+  width: 100%;
+  height: 420px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+  border: 4px solid #FFFFFF;
+}
+
+.image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Floating Glass Badges */
+.floating-badge {
   position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at center, rgba(11, 26, 44, 0.45) 0%, rgba(5, 14, 26, 0.82) 100%),
-              linear-gradient(180deg, rgba(8, 20, 36, 0.5) 0%, rgba(5, 14, 26, 0.85) 100%);
-  z-index: 1;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  padding: 12px 20px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.badge-top-right {
+  top: -20px;
+  right: -20px;
+}
+
+.badge-bottom-left {
+  bottom: -20px;
+  left: -20px;
+}
+
+.floating-badge i {
+  font-size: 1.5rem;
+  color: #0757A5;
+}
+
+.floating-badge i.icon-green {
+  color: #25D366;
+}
+
+.floating-badge strong {
+  display: block;
+  font-size: 0.95rem;
+  color: #0F172A;
+  font-family: 'Poppins', sans-serif;
+}
+
+.floating-badge span {
+  font-size: 0.75rem;
+  color: #64748B;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .visa-split-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .visa-hero-content {
+    text-align: center;
+  }
+  .visa-hero-features {
+    align-items: center;
+  }
+  .hero-cta-buttons {
+    justify-content: center;
+  }
+  .floating-badge {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin-top: 15px;
+  }
 }
 
 .inner-hero-container {
@@ -339,7 +493,7 @@ body {
   margin: 0 auto;
 }
 
-/* Premium Badge */
+/* Glassmorphism Badge */
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -357,10 +511,10 @@ body {
 }
 
 .hero-badge i {
-  color: #00E5FF; /* Replaced yellow with cyan */
+  color: #00E5FF;
 }
 
-/* Heading Styling */
+/* Headings */
 .inner-hero-container h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 3.5rem;
@@ -371,8 +525,9 @@ body {
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
-.accent-gold {
-  color: #00E5FF !important; /* Replaced yellow with cyan brand accent */
+.accent-gold,
+.gradient-text {
+  color: #00E5FF !important;
   text-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
 }
 
@@ -381,7 +536,8 @@ body {
 }
 
 /* Subtitle */
-.hero-subtitle {
+.hero-subtitle,
+.inner-hero-container p {
   font-family: 'Inter', sans-serif;
   font-size: 1.15rem;
   line-height: 1.6;
@@ -390,7 +546,7 @@ body {
   margin: 0 auto 28px;
 }
 
-/* Interactive Search Bar */
+/* Search Box */
 .hero-search-box {
   display: flex;
   align-items: center;
@@ -439,7 +595,7 @@ body {
   transform: translateY(-1px);
 }
 
-/* Quick Filter Tag Chips */
+/* Quick Filter Chips */
 .hero-quick-tags {
   display: flex;
   align-items: center;
@@ -469,7 +625,7 @@ body {
   font-weight: 600;
 }
 
-/* Floating Glassmorphic Stats Container */
+/* Glassmorphic Stats Container */
 .hero-stats-bar {
   display: inline-flex;
   align-items: center;
@@ -493,7 +649,7 @@ body {
 
 .stat-box i {
   font-size: 1.7rem;
-  color: #00E5FF; /* Replaced yellow with cyan */
+  color: #00E5FF;
 }
 
 .stat-box strong {
@@ -516,7 +672,6 @@ body {
   height: 32px;
   background: rgba(255, 255, 255, 0.2);
 }
-
 
 /* ==========================================
    04. TRUST & FEATURES GRID
@@ -1350,4 +1505,37 @@ body {
   color: #6B7280;
   font-size: 0.8rem;
   line-height: 1.5;
+}
+
+/* ==========================================
+   11. RESPONSIVE MEDIA QUERIES
+   ========================================== */
+@media (max-width: 768px) {
+  .inner-hero-container h1,
+  .visa-hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero-search-box {
+    flex-direction: column;
+    padding: 12px;
+    border-radius: 20px;
+    gap: 10px;
+  }
+
+  .hero-search-box .btn-search {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-stats-bar {
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .stat-divider {
+    display: none;
+  }
 }
