@@ -10,7 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+  <!-- Add inside <head> of index.html -->
+<link rel="preload" as="image" href="assets/images/hero-bg.jpg">
   <!-- Stylesheets (Exact relative paths from pages/) -->
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -24,7 +25,7 @@
       
       <!-- Brand Logo + Typography -->
       <a href="index.html" class="brand-logo">
-       <img src="assets/images/logo.png" alt="Fly2World Logo" class="logo-img">
+       <img src="assets/images/logo.png" alt="Fly2World Logo" class="logo-img" fetchpriority="high" loading="eager">
         <span class="brand-text">Fly<span class="brand-accent">2</span>World Travels</span>
       </a>
       

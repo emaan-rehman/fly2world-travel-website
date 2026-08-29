@@ -209,7 +209,7 @@ body {
   position: relative;
   min-height: 85vh;
   height: 720px;
-  background: url('../images/hero-bg.jpg') center/cover no-repeat;
+  background: url('../images/hero-bg.webp') center/cover no-repeat;
   display: flex;
   align-items: center;
   padding-top: 100px;
