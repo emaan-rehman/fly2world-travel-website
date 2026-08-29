@@ -1,17 +1,23 @@
 /* ==========================================
+   FLY2WORLD TRAVELS - RESPONSIVE STYLES
+   All breakpoint-specific rules live in this file.
+   Base styles remain in style.css.
+   ========================================== */
+
+/* ==========================================
    1. TABLET & SMALL DESKTOP (Max Width: 1024px)
    ========================================== */
 @media (max-width: 1024px) {
   .trust-grid,
-  .services-grid, 
-  .destinations-grid, 
+  .services-grid,
+  .destinations-grid,
   .visa-cards,
-  .steps-grid { 
-    grid-template-columns: repeat(2, 1fr); 
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .footer-grid { 
-    grid-template-columns: 1fr 1fr; 
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -57,7 +63,7 @@
 }
 
 /* ==========================================
-   3. MOBILE & TABLET BREAKPOINT (Max Width: 768px)
+   3. MOBILE & TABLET (Max Width: 768px)
    ========================================== */
 @media (max-width: 768px) {
   /* Hamburger Navigation */
@@ -82,18 +88,19 @@
     transition: all 0.3s ease;
   }
 
-  /* Hamburger Active Animation (X Shape) */
   .hamburger.active span:nth-child(1) {
     transform: translateY(7.5px) rotate(45deg);
   }
+
   .hamburger.active span:nth-child(2) {
     opacity: 0;
   }
+
   .hamburger.active span:nth-child(3) {
     transform: translateY(-7.5px) rotate(-45deg);
   }
 
-  /* Mobile Dropdown Menu Styling */
+  /* Mobile Dropdown Menu */
   .nav-menu {
     position: absolute;
     top: 100%;
@@ -116,7 +123,7 @@
     align-items: center;
   }
 
-  /* Hero Sections & Headings */
+  /* General Hero Sections */
   .hero-section {
     height: auto;
     min-height: 580px;
@@ -153,8 +160,8 @@
     font-size: 2.2rem;
   }
 
-  .hero-content h1 { 
-    font-size: 2.2rem; 
+  .hero-content h1 {
+    font-size: 2.2rem;
   }
 
   .hero-content p {
@@ -167,8 +174,8 @@
 
   /* Hero Actions & Buttons */
   .hero-actions,
-  .travel-hero-actions { 
-    flex-direction: column; 
+  .travel-hero-actions {
+    flex-direction: column;
     align-items: stretch;
     width: 100%;
   }
@@ -202,22 +209,22 @@
     display: none;
   }
 
-  /* Grid & Cards Single Column Stacking */
-  .why-grid, 
+  /* General Grid Stacking */
+  .why-grid,
   .split-banner,
-  .services-grid, 
-  .destinations-grid, 
-  .visa-cards, 
+  .services-grid,
+  .destinations-grid,
+  .visa-cards,
   .steps-grid,
-  .about-grid, 
-  .features-grid, 
+  .about-grid,
+  .features-grid,
   .values-grid,
-  .trust-grid { 
-    grid-template-columns: 1fr !important; 
+  .trust-grid {
+    grid-template-columns: 1fr !important;
   }
 
-  .footer-grid { 
-    grid-template-columns: 1fr; 
+  .footer-grid {
+    grid-template-columns: 1fr;
   }
 
   .service-detail-card {
@@ -235,6 +242,154 @@
   }
 
   .nav-btn span {
-    display: none; /* Shows icon only for header WhatsApp button on small screens */
+    display: none;
+  }
+}
+
+/* =========================================================
+   5. HOMEPAGE PREMIUM HERO + HOW IT WORKS + FINAL CTA
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .hero-floating-card {
+    right: 3%;
+  }
+
+  .steps-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .steps-wrapper::before {
+    display: none;
+  }
+
+  .how-it-works-header {
+    gap: 40px;
+  }
+
+  .how-intro {
+    flex-basis: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .premium-hero {
+    min-height: 720px;
+    height: auto;
+    padding-top: 105px;
+    padding-bottom: 80px;
+    background-position: center;
+  }
+
+  .premium-hero .hero-overlay {
+    background: linear-gradient(180deg, rgba(4, 13, 24, 0.83), rgba(4, 13, 24, 0.72) 52%, rgba(4, 13, 24, 0.91));
+  }
+
+  .premium-hero h1 {
+    font-size: clamp(2.75rem, 12vw, 4rem);
+    letter-spacing: -1.5px;
+  }
+
+  .premium-hero .hero-content p {
+    font-size: 0.95rem;
+    line-height: 1.72;
+  }
+
+  .premium-hero .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .premium-hero .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-floating-card,
+  .hero-scroll {
+    display: none;
+  }
+
+  .hero-mini-trust {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+  }
+
+  .how-it-works-header {
+    display: block;
+    margin-bottom: 35px;
+  }
+
+  .how-heading h2 {
+    font-size: 42px;
+  }
+
+  .how-intro {
+    max-width: 600px;
+    margin-top: 18px;
+  }
+
+  .steps-wrapper {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .step-card {
+    min-height: auto;
+    padding: 23px 24px 25px;
+  }
+
+  .final-cta {
+    padding: 78px 0;
+  }
+
+  .final-cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .final-cta-actions .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .premium-hero .hero-badge {
+    font-size: 0.72rem;
+    padding: 8px 13px;
+  }
+
+  .premium-hero h1 {
+    font-size: 2.65rem;
+  }
+
+  .premium-hero .hero-content p {
+    margin-top: 20px;
+  }
+
+  .trust-highlights {
+    padding: 28px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .how-heading h2 {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+
+  .how-eyebrow {
+    font-size: 11px;
+    letter-spacing: 1.4px;
+  }
+
+  .how-intro {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .step-card {
+    border-radius: 16px;
   }
 }
