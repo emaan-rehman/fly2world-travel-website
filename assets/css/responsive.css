@@ -1,8 +1,4 @@
-/* ==========================================
-   FLY2WORLD TRAVELS - RESPONSIVE STYLES
-   All breakpoint-specific rules live in this file.
-   Base styles remain in style.css.
-   ========================================== */
+
 
 /* ==========================================
    1. TABLET & SMALL DESKTOP (Max Width: 1024px)
@@ -66,6 +62,35 @@
    3. MOBILE & TABLET (Max Width: 768px)
    ========================================== */
 @media (max-width: 768px) {
+  /* Prevent Brand Title wrapping on mobile */
+  .brand-logo,
+  .logo,
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap !important;
+  }
+
+  .brand-text,
+  .logo-text,
+  .brand-logo span {
+    font-size: 1.05rem !important;
+    white-space: nowrap !important;
+    letter-spacing: -0.3px;
+  }
+
+  .logo-img,
+  .brand-logo img {
+    max-height: 34px !important;
+    width: auto;
+  }
+
+  .nav-container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
   /* Hamburger Navigation */
   .hamburger {
     display: flex !important;
@@ -77,7 +102,8 @@
     border: none;
     cursor: pointer;
     padding: 0;
-    margin-left: 12px;
+    margin-left: 8px;
+    flex-shrink: 0;
   }
 
   .hamburger span {
@@ -244,6 +270,26 @@
   .nav-btn span {
     display: none;
   }
+
+  /* Extra Brand Sizing for Compact Mobile Displays */
+  .brand-text,
+  .logo-text,
+  .brand-logo span {
+    font-size: 0.95rem !important;
+  }
+
+  .logo-img,
+  .brand-logo img {
+    max-height: 30px !important;
+  }
+
+  .nav-actions {
+    gap: 6px;
+  }
+
+  .btn-whatsapp.nav-btn {
+    padding: 8px 10px !important;
+  }
 }
 
 /* =========================================================
@@ -391,5 +437,11 @@
 
   .step-card {
     border-radius: 16px;
+  }
+
+  .brand-text,
+  .logo-text,
+  .brand-logo span {
+    font-size: 0.88rem !important;
   }
 }
