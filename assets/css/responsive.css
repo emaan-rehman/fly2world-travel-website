@@ -1,5 +1,3 @@
-
-
 /* ==========================================
    1. TABLET & SMALL DESKTOP (Max Width: 1024px)
    ========================================== */
@@ -11,12 +9,17 @@
   .steps-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
-
+@media (max-width: 480px) {
+  .brand-text,
+  .logo-text,
+  .brand-logo span {
+    font-size: 0.92rem !important; /* Slightly bumped up for smaller phones */
+  }
+}
 /* ==========================================
    2. LAPTOPS & TABLETS (Max Width: 992px)
    ========================================== */
