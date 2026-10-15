@@ -112,7 +112,7 @@ if (starContainer && ratingInput) {
   });
 
   // Ensure default rating (5) is highlighted initially
-  updateStars(parseInt(ratingInput.value));
+  updateStars(parseInt(ratingInput.value) || 0);
 }
 
   if (commentsList) {
