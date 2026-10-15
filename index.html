@@ -405,13 +405,14 @@
 
             <div class="form-group">
               <label for="commentRating">Rating</label>
-              <select id="commentRating" required>
-                <option value="5">⭐⭐⭐⭐⭐ (5/5 - Excellent)</option>
-                <option value="4">⭐⭐⭐⭐ (4/5 - Very Good)</option>
-                <option value="3">⭐⭐⭐ (3/5 - Average)</option>
-                <option value="2">⭐⭐ (2/5 - Poor)</option>
-                <option value="1">⭐ (1/5 - Terrible)</option>
-              </select>
+            <div class="star-rating" id="starRating">
+    <i class="fa-solid fa-star star" data-value="1"></i>
+    <i class="fa-solid fa-star star" data-value="2"></i>
+    <i class="fa-solid fa-star star" data-value="3"></i>
+    <i class="fa-solid fa-star star" data-value="4"></i>
+    <i class="fa-solid fa-star star" data-value="5"></i>
+  </div>
+  <input type="hidden" id="commentRating" value="0">
             </div>
 
             <div class="form-group">

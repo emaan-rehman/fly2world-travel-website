@@ -2421,3 +2421,25 @@ body {
   color: var(--text-muted);
   padding: 20px 0;
 }
+/* Interactive Star Rating Widget */
+.star-rating {
+  display: flex;
+  gap: 8px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.star-rating .star {
+  color: #CBD5E1; /* Inactive grey star */
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.star-rating .star.active,
+.star-rating .star.hover {
+  color: #F59E0B; /* Active gold star */
+}
+
+.star-rating .star:hover {
+  transform: scale(1.15);
+}

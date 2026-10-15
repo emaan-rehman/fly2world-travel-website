@@ -66,6 +66,54 @@ document.addEventListener('DOMContentLoaded', () => {
   const commentForm = document.getElementById('commentForm');
   const commentsList = document.getElementById('commentsList');
   const statusMsg = document.getElementById('commentStatusMessage');
+  // Interactive Star Rating Handler
+const starContainer = document.getElementById('starRating');
+const ratingInput = document.getElementById('commentRating');
+
+if (starContainer && ratingInput) {
+  const stars = starContainer.querySelectorAll('.star');
+
+  const updateStars = (ratingValue) => {
+    stars.forEach(star => {
+      const val = parseInt(star.getAttribute('data-value'));
+      if (val <= ratingValue) {
+        star.classList.add('active');
+      } else {
+        star.classList.remove('active');
+      }
+    });
+  };
+
+  stars.forEach(star => {
+    // Hover effect
+    star.addEventListener('mouseenter', () => {
+      const hoverVal = parseInt(star.getAttribute('data-value'));
+      stars.forEach(s => {
+        const val = parseInt(s.getAttribute('data-value'));
+        if (val <= hoverVal) {
+          s.classList.add('hover');
+        } else {
+          s.classList.remove('hover');
+        }
+      });
+    });
+
+    // Remove hover effect on leave
+    star.addEventListener('mouseleave', () => {
+      stars.forEach(s => s.classList.remove('hover'));
+    });
+
+    // Click to select rating
+    star.addEventListener('click', () => {
+      const selectedVal = star.getAttribute('data-value');
+      ratingInput.value = selectedVal;
+      updateStars(parseInt(selectedVal));
+    });
+  });
+
+  // Ensure default rating (5) is highlighted initially
+  updateStars(parseInt(ratingInput.value));
+}
 
   if (commentsList) {
     fetchComments();
