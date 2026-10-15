@@ -448,3 +448,72 @@
     font-size: 0.88rem !important;
   }
 }
+/* ==========================================
+   COMMENTS SECTION RESPONSIVE STYLES
+   ========================================== */
+
+/* 1. TABLET & SMALL DESKTOP (Max Width: 1024px) */
+@media (max-width: 1024px) {
+  .comments-container {
+    gap: 24px;
+  }
+  
+  .comment-form-card,
+  .comments-list-wrapper {
+    padding: 24px;
+  }
+}
+
+/* 2. MOBILE & TABLET STACKING (Max Width: 868px) */
+@media (max-width: 868px) {
+  .comments-container {
+    grid-template-columns: 1fr !important;
+    gap: 30px;
+  }
+
+  .comments-list {
+    max-height: 400px;
+  }
+}
+
+/* 3. SMALL MOBILE DEVICES (Max Width: 576px) */
+@media (max-width: 576px) {
+  .comments-intro {
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+  }
+
+  .comment-form-card,
+  .comments-list-wrapper {
+    padding: 20px 16px;
+    border-radius: var(--radius-sm);
+  }
+
+  .comment-form-card h3,
+  .comments-list-wrapper h3 {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+  }
+
+  .comment-item {
+    padding: 14px;
+  }
+
+  .comment-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .comment-author {
+    font-size: 0.9rem;
+  }
+
+  .comment-rating {
+    font-size: 0.8rem;
+  }
+
+  .comment-text {
+    font-size: 0.88rem;
+  }
+}
