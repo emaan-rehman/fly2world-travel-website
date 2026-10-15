@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Cloudflare Worker API Endpoint
-const API_URL = 'https://fly2world-comments-api.fly2worldtravels.workers.dev/';
+const API_URL = 'https://fly2world-comments-api.fly2worldtravels.workers.dev/api/comments';
 
 document.addEventListener('DOMContentLoaded', () => {
   const commentForm = document.getElementById('commentForm');
