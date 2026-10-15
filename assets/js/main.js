@@ -58,3 +58,89 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+
+// Cloudflare Worker API Endpoint
+const API_URL = 'https://fly2world-comments-api.fly2worldtravels.workers.dev/';
+
+document.addEventListener('DOMContentLoaded', () => {
+  const commentForm = document.getElementById('commentForm');
+  const commentsList = document.getElementById('commentsList');
+  const statusMsg = document.getElementById('commentStatusMessage');
+
+  if (commentsList) {
+    fetchComments();
+  }
+
+  if (commentForm) {
+    commentForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const name = document.getElementById('commentName').value.trim();
+      const rating = document.getElementById('commentRating').value;
+      const message = document.getElementById('commentMessage').value.trim();
+      const submitBtn = document.getElementById('submitCommentBtn');
+
+      if (!name || !message) return;
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+      statusMsg.className = 'status-msg';
+      statusMsg.textContent = '';
+
+      try {
+        const res = await fetch(API_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, rating, message })
+        });
+
+        const data = await res.json();
+
+        if (res.ok) {
+          statusMsg.className = 'status-msg success';
+          statusMsg.textContent = 'Thank you! Your comment has been posted.';
+          commentForm.reset();
+          fetchComments();
+        } else {
+          throw new Error(data.error || 'Failed to submit comment');
+        }
+      } catch (err) {
+        statusMsg.className = 'status-msg error';
+        statusMsg.textContent = err.message || 'Error submitting comment. Please try again.';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Submit Comment <i class="fa-solid fa-paper-plane"></i>';
+      }
+    });
+  }
+
+  async function fetchComments() {
+    try {
+      const res = await fetch(API_URL);
+      const comments = await res.json();
+
+      if (!Array.isArray(comments) || comments.length === 0) {
+        commentsList.innerHTML = '<p class="no-comments">No comments yet. Be the first to leave a review!</p>';
+        return;
+      }
+
+      commentsList.innerHTML = comments.map(c => `
+        <div class="comment-item">
+          <div class="comment-header">
+            <span class="comment-author"><i class="fa-solid fa-circle-user"></i> ${escapeHtml(c.name)}</span>
+            <span class="comment-rating">${'★'.repeat(c.rating)}${'☆'.repeat(5 - c.rating)}</span>
+          </div>
+          <p class="comment-text">${escapeHtml(c.message)}</p>
+        </div>
+      `).join('');
+    } catch (err) {
+      commentsList.innerHTML = '<p class="no-comments">Unable to load comments at this time.</p>';
+    }
+  }
+
+  function escapeHtml(str) {
+    return str.replace(/[&<>'"]/g, 
+      tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+    );
+  }
+});

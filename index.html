@@ -382,7 +382,58 @@
       </div>
     </div>
   </section>
+<!-- 06. Client Reviews & Comments Section -->
+  <section class="comments-section section-padding" id="comments">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="subheading">Testimonials</span>
+        <h2>Client Reviews & Comments</h2>
+        <p class="comments-intro">See what our travelers have to say or share your own experience with Fly2World Travels.</p>
+      </div>
 
+      <div class="comments-container">
+        <!-- New Comment Form -->
+        <div class="comment-form-card">
+          <h3>Leave a Comment</h3>
+          <form id="commentForm">
+            <div class="form-group">
+              <label for="commentName">Your Name</label>
+              <input type="text" id="commentName" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="commentRating">Rating</label>
+              <select id="commentRating" required>
+                <option value="5">⭐⭐⭐⭐⭐ (5/5 - Excellent)</option>
+                <option value="4">⭐⭐⭐⭐ (4/5 - Very Good)</option>
+                <option value="3">⭐⭐⭐ (3/5 - Average)</option>
+                <option value="2">⭐⭐ (2/5 - Poor)</option>
+                <option value="1">⭐ (1/5 - Terrible)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="commentMessage">Your Experience / Message</label>
+              <textarea id="commentMessage" rows="4" placeholder="Write your review or question here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit-comment" id="submitCommentBtn">
+              Submit Comment <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            <div id="commentStatusMessage" class="status-msg"></div>
+          </form>
+        </div>
+
+        <!-- Comments Display List -->
+        <div class="comments-list-wrapper">
+          <h3>Recent Feedback</h3>
+          <div id="commentsList" class="comments-list">
+            <p class="loading-text"><i class="fa-solid fa-spinner fa-spin"></i> Loading comments...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- 13 & 14. Premium Footer -->
   <footer class="footer" id="contact">
     <div class="container">
